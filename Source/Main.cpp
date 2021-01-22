@@ -68,8 +68,10 @@
 #pragma link "dxSkinWhiteprint"
 #pragma link "dxSkinXmas2008Blue"
 #pragma link "AdvMemo"
+#pragma link "AdvGlassButton"
 #pragma resource "*.dfm"
 #pragma link "libxl.lib"
+#pragma link "DU_CPP_DLL_XE7.lib"
 TFormMain *FormMain;
 //---------------------------------------------------------------------------
 __fastcall TFormMain::TFormMain(TComponent* Owner)
@@ -87,6 +89,9 @@ void __fastcall TFormMain::InitProgram() {
 
 	// Libxl Test
 	InitLibxl();
+
+	// DUDLL Test
+	m_pDuDll = NULL;
 
 
 	PrintMsg(L"Init Complete");
@@ -140,4 +145,34 @@ libxl::Sheet* __fastcall TFormMain::getSheetByName(libxl::Book* book, const wcha
 	}
 	return 0;
 }
+
+/*
+__declspec(dllexport) DU_DLL* Create_DU_DLL();
+__declspec(dllexport) bool DU_DLL_Open(DU_DLL* pDuDll);
+__declspec(dllexport) bool DU_DLL_Close(DU_DLL* pDuDll);
+__declspec(dllexport) bool DU_DLL_SetBl(DU_DLL* pDuDll, int lumi);
+__declspec(dllexport) bool DU_DLL_GetBl(DU_DLL* pDuDll, int* blValue);
+__declspec(dllexport) bool DU_DLL_Get_Hrs(DU_DLL* pDuDll, BYTE channel, BYTE* data);
+__declspec(dllexport) bool DU_DLL_GetLux(DU_DLL* pDuDll, int* ret_lux);
+__declspec(dllexport) bool DU_DLL_GetTemp(DU_DLL* pDuDll, float* temp);
+__declspec(dllexport) bool DU_DLL_AutoBlStatus(DU_DLL* pDuDll, int* lux, int* brig);
+__declspec(dllexport) void DU_DLL_AutoBrig(DU_DLL* pDuDll);
+//__declspec(dllexport) void DU_DLL_FTError_Check(DU_DLL* pDuDll, ULONG* isFTError, string* result);
+*/
+
+
+
+void __fastcall TFormMain::btn_GetLuxClick(TObject *Sender)
+{
+	m_pDuDll = Create_DU_DLL();
+
+	if(DU_DLL_Open(m_pDuDll) == false) {
+		PrintMsg(L"Fail to open dudll");
+		return;
+	}
+//__declspec(dllexport) bool DU_DLL_GetTemp(DU_DLL* pDuDll, float* temp);
+
+	PrintMsg(L"Get Lux");
+}
+//---------------------------------------------------------------------------
 

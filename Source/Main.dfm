@@ -55,7 +55,6 @@ object FormMain: TFormMain
       Width = 719
       Height = 613
       Align = alLeft
-      PageIndex = 2
       TabOrder = 0
       object TPage
         Left = 0
@@ -77,6 +76,31 @@ object FormMain: TFormMain
           ExplicitTop = 120
           ExplicitWidth = 185
           ExplicitHeight = 41
+          object btn_GetLux: TAdvGlassButton
+            Left = 16
+            Top = 53
+            Width = 81
+            Height = 32
+            Cursor = crHandPoint
+            BackColor = clBlack
+            Caption = 'GET LUX'
+            CornerRadius = 10
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clLime
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ForeColor = clRed
+            ForceTransparent = True
+            GlowColor = clLime
+            InnerBorderColor = clBlack
+            OuterBorderColor = clLime
+            ParentFont = False
+            ShineColor = clGray
+            TabOrder = 0
+            Version = '1.3.0.2'
+            OnClick = btn_GetLuxClick
+          end
         end
       end
       object TPage

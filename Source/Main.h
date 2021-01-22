@@ -73,7 +73,25 @@
 #include "dxSkinXmas2008Blue.hpp"
 #include "AdvMemo.hpp"
 #include <Vcl.ExtCtrls.hpp>
+#include "AdvGlassButton.hpp"
 //---------------------------------------------------------------------------
+class DU_DLL;
+
+extern "C"
+{
+	__declspec(dllexport) DU_DLL* Create_DU_DLL();
+	__declspec(dllexport) bool DU_DLL_Open(DU_DLL* pDuDll);
+	__declspec(dllexport) bool DU_DLL_Close(DU_DLL* pDuDll);
+	__declspec(dllexport) bool DU_DLL_SetBl(DU_DLL* pDuDll, int lumi);
+	__declspec(dllexport) bool DU_DLL_GetBl(DU_DLL* pDuDll, int* blValue);
+	__declspec(dllexport) bool DU_DLL_Get_Hrs(DU_DLL* pDuDll, BYTE channel, BYTE* data);
+	__declspec(dllexport) bool DU_DLL_GetLux(DU_DLL* pDuDll, int* ret_lux);
+	__declspec(dllexport) bool DU_DLL_GetTemp(DU_DLL* pDuDll, float* temp);
+	__declspec(dllexport) bool DU_DLL_AutoBlStatus(DU_DLL* pDuDll, int* lux, int* brig);
+	__declspec(dllexport) void DU_DLL_AutoBrig(DU_DLL* pDuDll);
+	//__declspec(dllexport) void DU_DLL_FTError_Check(DU_DLL* pDuDll, ULONG* isFTError, string* result);
+}
+
 class TFormMain : public TForm
 {
 __published:	// IDE-managed Components
@@ -90,7 +108,9 @@ __published:	// IDE-managed Components
 	TPanel *__pnBase_02_Memory;
 	TdxBarLargeButton *btn_Menu_3;
 	TPanel *__pnBase_03_Libxl;
+	TAdvGlassButton *btn_GetLux;
 	void __fastcall ClickMenuButton(TObject *Sender);
+	void __fastcall btn_GetLuxClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
@@ -106,6 +126,9 @@ public: // Libxl Test
 	void __fastcall InitLibxl();
 	libxl::Sheet* __fastcall getSheetByName(libxl::Book* book, const wchar_t* name);
 
+
+public: // DUDLL TEST
+	DU_DLL* m_pDuDll;
 
 	libxl::Book* m_Book;
 };
