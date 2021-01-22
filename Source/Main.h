@@ -85,6 +85,8 @@ __published:	// IDE-managed Components
 	TAdvMemo *memo;
 	TPanel *__pnBase_01_Bright;
 	TPanel *__pnBase_02_Memory;
+	TdxBarLargeButton *btn_Menu_3;
+	TPanel *Panel1;
 	void __fastcall ClickMenuButton(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
