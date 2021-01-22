@@ -85,6 +85,10 @@ void __fastcall TFormMain::InitProgram() {
 	Notebook_Main->PageIndex = 0;
 
 
+	// Libxl Test
+	InitLibxl();
+
+
 	PrintMsg(L"Init Complete");
 }
 //---------------------------------------------------------------------------
@@ -101,3 +105,39 @@ void __fastcall TFormMain::ClickMenuButton(TObject *Sender)
 	Notebook_Main->PageIndex = p_btn->Tag;
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TFormMain::InitLibxl() {
+
+	m_Book = xlCreateXMLBook();
+	if(m_Book) {
+		m_Book->setKey(L"JungWook Son", L"windows-2124230806c1e30f66bf6365a7l1hdm8");
+		if(m_Book->load(L"LibxlTest.xlsx")) {
+			libxl::Format* format = NULL;
+			libxl::Sheet* p_Sheet = getSheetByName(m_Book, L"Sheet1");
+			PrintMsg(p_Sheet->readNum(0, 0, &format));
+		} else {
+			PrintMsg(L"Fail to Load Excel File");
+			return;
+		}
+	} else {
+		PrintMsg(L"Fail to Create Book");
+		return;
+	}
+
+	PrintMsg(L"Libxl Init Complete");
+}
+//---------------------------------------------------------------------------
+
+libxl::Sheet* __fastcall TFormMain::getSheetByName(libxl::Book* book, const wchar_t* name) {
+
+	int temp = book->sheetCount();
+	for(unsigned short i = 0; i < book->sheetCount(); ++i)
+	{
+		if(wcscmp(book->getSheet(i)->name(), name) == 0)
+		{
+			return book->getSheet(i);
+		}
+	}
+	return 0;
+}
+

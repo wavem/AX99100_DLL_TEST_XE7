@@ -3,6 +3,9 @@
 #ifndef MainH
 #define MainH
 //---------------------------------------------------------------------------
+
+#include "libxl.h"
+//---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
@@ -86,7 +89,7 @@ __published:	// IDE-managed Components
 	TPanel *__pnBase_01_Bright;
 	TPanel *__pnBase_02_Memory;
 	TdxBarLargeButton *btn_Menu_3;
-	TPanel *Panel1;
+	TPanel *__pnBase_03_Libxl;
 	void __fastcall ClickMenuButton(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
@@ -96,6 +99,15 @@ public: // START
 
 	void __fastcall InitProgram();
 	void __fastcall PrintMsg(UnicodeString _str);
+
+
+
+public: // Libxl Test
+	void __fastcall InitLibxl();
+	libxl::Sheet* __fastcall getSheetByName(libxl::Book* book, const wchar_t* name);
+
+
+	libxl::Book* m_Book;
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;

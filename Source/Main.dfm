@@ -109,7 +109,7 @@ object FormMain: TFormMain
         Caption = 'Libxl'
         ExplicitWidth = 0
         ExplicitHeight = 0
-        object Panel1: TPanel
+        object __pnBase_03_Libxl: TPanel
           Left = 0
           Top = 0
           Width = 719
