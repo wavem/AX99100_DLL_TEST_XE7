@@ -69,7 +69,10 @@
 #pragma link "dxSkinXmas2008Blue"
 #pragma link "AdvMemo"
 #pragma link "AdvGlassButton"
+#pragma link "AdvEdit"
+#pragma link "AdvCombo"
 #pragma resource "*.dfm"
+#pragma link "MVBDLL.lib"
 TFormMain *FormMain;
 //---------------------------------------------------------------------------
 __fastcall TFormMain::TFormMain(TComponent* Owner)

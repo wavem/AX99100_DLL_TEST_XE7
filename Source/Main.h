@@ -71,8 +71,21 @@
 #include "AdvMemo.hpp"
 #include <Vcl.ExtCtrls.hpp>
 #include "AdvGlassButton.hpp"
+#include "AdvEdit.hpp"
+#include "AdvCombo.hpp"
 //---------------------------------------------------------------------------
 
+#define	LBERR_SUCCESS					(0x00)
+#define	LBERR_NOTEXIST_PORT				(0x01)
+#define LBERR_MANYEXIST_PORT			(0x02)
+#define LBERR_PORT_OPEN_ERR				(0x03)
+#define LBERR_NOTOPEN_PORT				(0x04)
+#define LBERR_BUSWIDTH_PORT				(0x05)
+
+extern "C" __declspec(dllexport) DWORD LBPortOpen();
+extern "C" __declspec(dllexport) DWORD LBPortClose();
+extern "C" __declspec(dllexport) DWORD LBPortRead(unsigned long ulOffset, unsigned long ulSize, unsigned char ucPosBar, unsigned char* pBuffer);
+extern "C" __declspec(dllexport) DWORD LBPortWrite(unsigned long ulOffset, unsigned long ulSize, unsigned char ucPosBar, unsigned char* pBuffer);
 
 class TFormMain : public TForm
 {
@@ -90,7 +103,16 @@ __published:	// IDE-managed Components
 	TPanel *__pnBase_02_Memory;
 	TdxBarLargeButton *btn_Menu_3;
 	TPanel *__pnBase_03_Libxl;
-	TAdvGlassButton *btn_GetLux;
+	TAdvGlassButton *btn_Open;
+	TAdvGlassButton *btn_Close;
+	TAdvGlassButton *btn_Read;
+	TAdvGlassButton *btn_Write;
+	TLabel *lb_Offset;
+	TAdvEdit *ed_Offset;
+	TLabel *lb_Length;
+	TLabel *lb_Value;
+	TAdvEdit *ed_Value;
+	TAdvComboBox *cb_Length;
 	void __fastcall ClickMenuButton(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
