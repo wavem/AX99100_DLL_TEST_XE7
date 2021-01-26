@@ -3,8 +3,8 @@ object FormMain: TFormMain
   Top = 0
   BorderStyle = bsSingle
   Caption = 'AX99100 TEST XE7'
-  ClientHeight = 739
-  ClientWidth = 1018
+  ClientHeight = 502
+  ClientWidth = 449
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,14 @@ object FormMain: TFormMain
   object RibbonMenu: TdxRibbon
     Left = 0
     Top = 0
-    Width = 1018
+    Width = 449
     Height = 126
     BarManager = BarMgr
     ColorSchemeName = 'Pumpkin'
     Contexts = <>
     TabOrder = 0
     TabStop = False
+    ExplicitWidth = 1018
     object Menutab_1: TdxRibbonTab
       Active = True
       Caption = 'Menu'
@@ -38,18 +39,20 @@ object FormMain: TFormMain
   object ___pnBase: TPanel
     Left = 0
     Top = 126
-    Width = 1018
-    Height = 613
+    Width = 449
+    Height = 376
     Align = alClient
     BevelOuter = bvNone
     Color = cl3DDkShadow
     ParentBackground = False
     TabOrder = 5
+    ExplicitWidth = 1018
+    ExplicitHeight = 613
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
-      Width = 719
-      Height = 613
+      Width = 209
+      Height = 376
       Align = alLeft
       PageIndex = 1
       TabOrder = 0
@@ -57,16 +60,20 @@ object FormMain: TFormMain
         Left = 0
         Top = 0
         Caption = 'Bright'
+        ExplicitWidth = 719
+        ExplicitHeight = 613
         object __pnBase_01_Bright: TPanel
           Left = 0
           Top = 0
-          Width = 719
-          Height = 613
+          Width = 209
+          Height = 376
           Align = alClient
           BevelOuter = bvNone
           Color = cl3DDkShadow
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 719
+          ExplicitHeight = 613
         end
       end
       object TPage
@@ -74,17 +81,21 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 1
         Caption = 'Memory'
+        ExplicitWidth = 719
+        ExplicitHeight = 613
         object __pnBase_02_Memory: TPanel
           Left = 0
           Top = 0
-          Width = 719
-          Height = 613
+          Width = 209
+          Height = 376
           Align = alClient
           BevelOuter = bvNone
           Color = clBlack
           ParentBackground = False
           TabOrder = 0
           ExplicitLeft = -5
+          ExplicitWidth = 719
+          ExplicitHeight = 613
           object lb_Offset: TLabel
             Left = 48
             Top = 226
@@ -150,6 +161,7 @@ object FormMain: TFormMain
             ShineColor = clGray
             TabOrder = 0
             Version = '1.3.0.2'
+            OnClick = btn_OpenClick
           end
           object btn_Close: TAdvGlassButton
             Left = 24
@@ -174,6 +186,7 @@ object FormMain: TFormMain
             ShineColor = clGray
             TabOrder = 1
             Version = '1.3.0.2'
+            OnClick = btn_CloseClick
           end
           object btn_Read: TAdvGlassButton
             Left = 24
@@ -198,6 +211,7 @@ object FormMain: TFormMain
             ShineColor = clGray
             TabOrder = 2
             Version = '1.3.0.2'
+            OnClick = btn_ReadClick
           end
           object btn_Write: TAdvGlassButton
             Left = 24
@@ -222,6 +236,7 @@ object FormMain: TFormMain
             ShineColor = clGray
             TabOrder = 3
             Version = '1.3.0.2'
+            OnClick = btn_WriteClick
           end
           object ed_Offset: TAdvEdit
             Left = 104
@@ -231,6 +246,7 @@ object FormMain: TFormMain
             EditAlign = eaRight
             EditType = etNumeric
             EmptyTextStyle = []
+            MaxValue = 3
             LabelFont.Charset = DEFAULT_CHARSET
             LabelFont.Color = clWindowText
             LabelFont.Height = -11
@@ -249,7 +265,7 @@ object FormMain: TFormMain
             Font.Height = -13
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
-            MaxLength = 8
+            MaxLength = 1
             ParentFont = False
             TabOrder = 4
             Text = '0'
@@ -310,9 +326,9 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             ItemIndex = 0
             Items.Strings = (
-              '8 bit'
+              '32 bit'
               '16 bit'
-              '32 bit')
+              '8 bit')
             LabelFont.Charset = DEFAULT_CHARSET
             LabelFont.Color = clWindowText
             LabelFont.Height = -11
@@ -320,7 +336,7 @@ object FormMain: TFormMain
             LabelFont.Style = []
             ParentFont = False
             TabOrder = 6
-            Text = '8 bit'
+            Text = '32 bit'
           end
         end
       end
@@ -329,27 +345,32 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 2
         Caption = 'Libxl'
+        ExplicitWidth = 719
+        ExplicitHeight = 613
         object __pnBase_03_Libxl: TPanel
           Left = 0
           Top = 0
-          Width = 719
-          Height = 613
+          Width = 209
+          Height = 376
           Align = alClient
           BevelOuter = bvNone
           Color = clSilver
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 719
+          ExplicitHeight = 613
         end
       end
     end
     object memo: TAdvMemo
-      Left = 720
+      Left = 209
       Top = 0
-      Width = 298
-      Height = 617
+      Width = 240
+      Height = 376
       Cursor = crIBeam
       ActiveLineSettings.ShowActiveLine = False
       ActiveLineSettings.ShowActiveLineIndicator = False
+      Align = alRight
       AutoCompletion.Font.Charset = DEFAULT_CHARSET
       AutoCompletion.Font.Color = clWindowText
       AutoCompletion.Font.Height = -11

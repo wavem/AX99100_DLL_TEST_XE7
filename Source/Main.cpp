@@ -106,3 +106,137 @@ void __fastcall TFormMain::ClickMenuButton(TObject *Sender)
 	Notebook_Main->PageIndex = p_btn->Tag;
 }
 //---------------------------------------------------------------------------
+
+UnicodeString TFormMain::ResultString(int _rst) {
+	UnicodeString tempStr = L"";
+
+	switch(_rst) {
+		case LBERR_SUCCESS:
+			tempStr = L"LBERR_SUCCESS";
+			break;
+
+		case LBERR_NOTEXIST_PORT:
+			tempStr = L"LBERR_NOTEXIST_PORT";
+			break;
+
+		case LBERR_MANYEXIST_PORT:
+			tempStr = L"LBERR_MANYEXIST_PORT";
+			break;
+
+		case LBERR_PORT_OPEN_ERR:
+			tempStr = L"LBERR_PORT_OPEN_ERR";
+			break;
+
+		case LBERR_NOTOPEN_PORT:
+			tempStr = L"LBERR_NOTOPEN_PORT";
+			break;
+
+		case LBERR_BUSWIDTH_PORT:
+			tempStr = L"LBERR_BUSWIDTH_PORT";
+			break;
+
+		default:
+			break;
+	}
+	return tempStr;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_OpenClick(TObject *Sender)
+{
+	int t_rst = LBPortOpen();
+	PrintMsg(ResultString(t_rst));
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_CloseClick(TObject *Sender)
+{
+	int t_rst = LBPortClose();
+	PrintMsg(ResultString(t_rst));
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_ReadClick(TObject *Sender)
+{
+	UnicodeString tempStr = L"";
+	UnicodeString rstStr = L"Read : ";
+	unsigned long t_Offset = 0;
+	unsigned long t_Size = 0;
+	unsigned char* t_pBuffer = NULL;
+
+	t_Offset = StrToInt(ed_Offset->Text);
+
+	switch(cb_Length->ItemIndex) {
+		case 0:
+			t_Size = 4;
+			break;
+		case 1:
+			t_Size = 2;
+			break;
+		case 2:
+			t_Size = 1;
+			break;
+		default:
+			t_Size = 1;
+			break;
+	}
+
+
+	t_pBuffer = new unsigned char[t_Size];
+	int t_rst = LBPortRead(t_Offset, t_Size, 0, t_pBuffer);
+	PrintMsg(ResultString(t_rst));
+
+	for(int i = 0 ; i < t_Size ; i++) {
+		tempStr.sprintf(L"%02X ", t_pBuffer[i]);
+		rstStr += tempStr;
+	}
+
+	PrintMsg(rstStr);
+	if(t_pBuffer) delete t_pBuffer;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_WriteClick(TObject *Sender)
+{
+	UnicodeString tempStr = L"";
+	UnicodeString rstStr = L"Write : ";
+	unsigned long t_Offset = 0;
+	unsigned long t_Size = 0;
+	unsigned char t_Value = 0;
+	unsigned char* t_pBuffer = NULL;
+
+	t_Offset = StrToInt(ed_Offset->Text);
+	t_Value = StrToInt(ed_Value->Text);
+
+	switch(cb_Length->ItemIndex) {
+		case 0:
+			t_Size = 4;
+			break;
+		case 1:
+			t_Size = 2;
+			break;
+		case 2:
+			t_Size = 1;
+			break;
+		default:
+			t_Size = 1;
+			break;
+	}
+
+	t_pBuffer = new unsigned char[t_Size];
+	memset(t_pBuffer, 0, t_Size);
+	memcpy((t_pBuffer + t_Offset), &t_Value, 1);
+
+
+	int t_rst = LBPortWrite(t_Offset, t_Size, 0, t_pBuffer);
+	PrintMsg(ResultString(t_rst));
+
+	for(int i = 0 ; i < t_Size ; i++) {
+		tempStr.sprintf(L"%02X ", t_pBuffer[i]);
+		rstStr += tempStr;
+	}
+
+	PrintMsg(rstStr);
+	if(t_pBuffer) delete t_pBuffer;
+}
+//---------------------------------------------------------------------------

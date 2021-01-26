@@ -114,6 +114,10 @@ __published:	// IDE-managed Components
 	TAdvEdit *ed_Value;
 	TAdvComboBox *cb_Length;
 	void __fastcall ClickMenuButton(TObject *Sender);
+	void __fastcall btn_OpenClick(TObject *Sender);
+	void __fastcall btn_CloseClick(TObject *Sender);
+	void __fastcall btn_ReadClick(TObject *Sender);
+	void __fastcall btn_WriteClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
@@ -122,6 +126,7 @@ public: // START
 
 	void __fastcall InitProgram();
 	void __fastcall PrintMsg(UnicodeString _str);
+	UnicodeString ResultString(int _rst);
 
 public: // DUDLL TEST
 
