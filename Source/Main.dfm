@@ -89,7 +89,6 @@ object FormMain: TFormMain
             ShineColor = clGray
             TabOrder = 0
             Version = '1.3.0.2'
-            OnClick = btn_GetLuxClick
           end
         end
       end

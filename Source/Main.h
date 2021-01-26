@@ -107,7 +107,6 @@ __published:	// IDE-managed Components
 	TPanel *__pnBase_03_Libxl;
 	TAdvGlassButton *btn_GetLux;
 	void __fastcall ClickMenuButton(TObject *Sender);
-	void __fastcall btn_GetLuxClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
@@ -118,7 +117,7 @@ public: // START
 	void __fastcall PrintMsg(UnicodeString _str);
 
 public: // DUDLL TEST
-	DU_DLL* m_pDuDll;
+
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;
