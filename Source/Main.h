@@ -72,22 +72,7 @@
 #include <Vcl.ExtCtrls.hpp>
 #include "AdvGlassButton.hpp"
 //---------------------------------------------------------------------------
-class DU_DLL;
 
-extern "C"
-{
-	__declspec(dllexport) DU_DLL* Create_DU_DLL();
-	__declspec(dllexport) bool DU_DLL_Open(DU_DLL* pDuDll);
-	__declspec(dllexport) bool DU_DLL_Close(DU_DLL* pDuDll);
-	__declspec(dllexport) bool DU_DLL_SetBl(DU_DLL* pDuDll, int lumi);
-	__declspec(dllexport) bool DU_DLL_GetBl(DU_DLL* pDuDll, int* blValue);
-	__declspec(dllexport) bool DU_DLL_Get_Hrs(DU_DLL* pDuDll, BYTE channel, BYTE* data);
-	__declspec(dllexport) bool DU_DLL_GetLux(DU_DLL* pDuDll, int* ret_lux);
-	__declspec(dllexport) bool DU_DLL_GetTemp(DU_DLL* pDuDll, float* temp);
-	__declspec(dllexport) bool DU_DLL_AutoBlStatus(DU_DLL* pDuDll, int* lux, int* brig);
-	__declspec(dllexport) void DU_DLL_AutoBrig(DU_DLL* pDuDll);
-	//__declspec(dllexport) void DU_DLL_FTError_Check(DU_DLL* pDuDll, ULONG* isFTError, string* result);
-}
 
 class TFormMain : public TForm
 {
