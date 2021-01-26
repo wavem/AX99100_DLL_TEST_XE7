@@ -585,7 +585,7 @@ object FormMain: TFormMain
       Caption = 'Libxl'
       Category = 0
       Hint = 'Libxl'
-      Visible = ivAlways
+      Visible = ivNever
       OnClick = ClickMenuButton
       HotGlyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
