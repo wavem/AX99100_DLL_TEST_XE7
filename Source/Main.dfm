@@ -25,7 +25,6 @@ object FormMain: TFormMain
     Contexts = <>
     TabOrder = 0
     TabStop = False
-    ExplicitWidth = 1130
     object Menutab_1: TdxRibbonTab
       Active = True
       Caption = 'Menu'
@@ -46,9 +45,6 @@ object FormMain: TFormMain
     Color = cl3DDkShadow
     ParentBackground = False
     TabOrder = 5
-    ExplicitLeft = 379
-    ExplicitWidth = 308
-    ExplicitHeight = 185
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
@@ -60,8 +56,6 @@ object FormMain: TFormMain
         Left = 0
         Top = 0
         Caption = 'Bright'
-        ExplicitWidth = 150
-        ExplicitHeight = 150
         object __pnBase_01_Bright: TPanel
           Left = 0
           Top = 0
@@ -72,10 +66,6 @@ object FormMain: TFormMain
           Color = cl3DDkShadow
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 56
-          ExplicitTop = 120
-          ExplicitWidth = 185
-          ExplicitHeight = 41
           object btn_GetLux: TAdvGlassButton
             Left = 16
             Top = 53
@@ -231,7 +221,7 @@ object FormMain: TFormMain
         '')
       MarkerList.UseDefaultMarkerImageIndex = False
       MarkerList.DefaultMarkerImageIndex = -1
-      MarkerList.ImageTransparentColor = -1
+      MarkerList.ImageTransparentColor = 33554432
       OleDropTarget = []
       PrintOptions.MarginLeft = 0
       PrintOptions.MarginRight = 0

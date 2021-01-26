@@ -3,9 +3,6 @@
 #ifndef MainH
 #define MainH
 //---------------------------------------------------------------------------
-
-#include "libxl.h"
-//---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
@@ -120,17 +117,8 @@ public: // START
 	void __fastcall InitProgram();
 	void __fastcall PrintMsg(UnicodeString _str);
 
-
-
-public: // Libxl Test
-	void __fastcall InitLibxl();
-	libxl::Sheet* __fastcall getSheetByName(libxl::Book* book, const wchar_t* name);
-
-
 public: // DUDLL TEST
 	DU_DLL* m_pDuDll;
-
-	libxl::Book* m_Book;
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;
