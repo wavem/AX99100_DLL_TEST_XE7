@@ -3,8 +3,8 @@ object FormMain: TFormMain
   Top = 0
   BorderStyle = bsSingle
   Caption = 'AX99100 TEST XE7'
-  ClientHeight = 502
-  ClientWidth = 449
+  ClientHeight = 739
+  ClientWidth = 1018
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,14 @@ object FormMain: TFormMain
   object RibbonMenu: TdxRibbon
     Left = 0
     Top = 0
-    Width = 449
+    Width = 1018
     Height = 122
     BarManager = BarMgr
     ColorSchemeName = 'MetropolisDark'
     Contexts = <>
     TabOrder = 0
     TabStop = False
+    ExplicitWidth = 449
     object Menutab_1: TdxRibbonTab
       Active = True
       Caption = 'Menu'
@@ -38,22 +39,22 @@ object FormMain: TFormMain
   object ___pnBase: TPanel
     Left = 0
     Top = 122
-    Width = 449
-    Height = 380
+    Width = 1018
+    Height = 617
     Align = alClient
     BevelOuter = bvNone
     Color = cl3DDkShadow
     ParentBackground = False
     TabOrder = 5
     ExplicitTop = 126
+    ExplicitWidth = 449
     ExplicitHeight = 376
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
       Width = 209
-      Height = 380
+      Height = 617
       Align = alLeft
-      PageIndex = 1
       TabOrder = 0
       ExplicitHeight = 376
       object TPage
@@ -65,7 +66,7 @@ object FormMain: TFormMain
           Left = 0
           Top = 0
           Width = 209
-          Height = 380
+          Height = 617
           Align = alClient
           BevelOuter = bvNone
           Color = cl3DDkShadow
@@ -84,7 +85,7 @@ object FormMain: TFormMain
           Left = 0
           Top = 0
           Width = 209
-          Height = 380
+          Height = 617
           Align = alClient
           BevelOuter = bvNone
           Color = clBlack
@@ -345,7 +346,7 @@ object FormMain: TFormMain
           Left = 0
           Top = 0
           Width = 209
-          Height = 380
+          Height = 617
           Align = alClient
           BevelOuter = bvNone
           Color = clSilver
@@ -356,10 +357,10 @@ object FormMain: TFormMain
       end
     end
     object memo: TAdvMemo
-      Left = 209
+      Left = 778
       Top = 0
       Width = 240
-      Height = 380
+      Height = 617
       Cursor = crIBeam
       ActiveLineSettings.ShowActiveLine = False
       ActiveLineSettings.ShowActiveLineIndicator = False
@@ -468,6 +469,7 @@ object FormMain: TFormMain
       UseStyler = True
       Version = '3.4.1.0'
       WordWrap = wwNone
+      ExplicitLeft = 209
       ExplicitHeight = 376
     end
   end
