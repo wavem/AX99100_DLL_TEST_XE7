@@ -73,6 +73,8 @@
 #include "AdvGlassButton.hpp"
 #include "AdvEdit.hpp"
 #include "AdvCombo.hpp"
+#include "AdvSmoothComboBox.hpp"
+#include "AdvSmoothListBox.hpp"
 //---------------------------------------------------------------------------
 
 #define	LBERR_SUCCESS					(0x00)
@@ -113,6 +115,10 @@ __published:	// IDE-managed Components
 	TLabel *lb_Value;
 	TAdvEdit *ed_Value;
 	TAdvComboBox *cb_Length;
+	TLabel *lb_Setting_Title_Clear_Right;
+	TAdvSmoothComboBox *cb_SendPeriod;
+	TAdvGlassButton *btn_Clear_Right;
+	TAdvGlassButton *AdvGlassButton1;
 	void __fastcall ClickMenuButton(TObject *Sender);
 	void __fastcall btn_OpenClick(TObject *Sender);
 	void __fastcall btn_CloseClick(TObject *Sender);

@@ -71,6 +71,8 @@
 #pragma link "AdvGlassButton"
 #pragma link "AdvEdit"
 #pragma link "AdvCombo"
+#pragma link "AdvSmoothComboBox"
+#pragma link "AdvSmoothListBox"
 #pragma resource "*.dfm"
 #pragma link "MVBDLL.lib"
 TFormMain *FormMain;
