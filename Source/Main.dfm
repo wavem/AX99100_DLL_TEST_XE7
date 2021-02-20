@@ -19,13 +19,12 @@ object FormMain: TFormMain
     Left = 0
     Top = 0
     Width = 449
-    Height = 126
+    Height = 122
     BarManager = BarMgr
-    ColorSchemeName = 'Pumpkin'
+    ColorSchemeName = 'MetropolisDark'
     Contexts = <>
     TabOrder = 0
     TabStop = False
-    ExplicitWidth = 1018
     object Menutab_1: TdxRibbonTab
       Active = True
       Caption = 'Menu'
@@ -38,42 +37,41 @@ object FormMain: TFormMain
   end
   object ___pnBase: TPanel
     Left = 0
-    Top = 126
+    Top = 122
     Width = 449
-    Height = 376
+    Height = 380
     Align = alClient
     BevelOuter = bvNone
     Color = cl3DDkShadow
     ParentBackground = False
     TabOrder = 5
-    ExplicitWidth = 1018
-    ExplicitHeight = 613
+    ExplicitTop = 126
+    ExplicitHeight = 376
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
       Width = 209
-      Height = 376
+      Height = 380
       Align = alLeft
       PageIndex = 1
       TabOrder = 0
+      ExplicitHeight = 376
       object TPage
         Left = 0
         Top = 0
         Caption = 'Bright'
-        ExplicitWidth = 719
-        ExplicitHeight = 613
+        ExplicitHeight = 376
         object __pnBase_01_Bright: TPanel
           Left = 0
           Top = 0
           Width = 209
-          Height = 376
+          Height = 380
           Align = alClient
           BevelOuter = bvNone
           Color = cl3DDkShadow
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 719
-          ExplicitHeight = 613
+          ExplicitHeight = 376
         end
       end
       object TPage
@@ -81,21 +79,18 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 1
         Caption = 'Memory'
-        ExplicitWidth = 719
-        ExplicitHeight = 613
+        ExplicitHeight = 376
         object __pnBase_02_Memory: TPanel
           Left = 0
           Top = 0
           Width = 209
-          Height = 376
+          Height = 380
           Align = alClient
           BevelOuter = bvNone
           Color = clBlack
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = -5
-          ExplicitWidth = 719
-          ExplicitHeight = 613
+          ExplicitHeight = 376
           object lb_Offset: TLabel
             Left = 48
             Top = 226
@@ -345,20 +340,18 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 2
         Caption = 'Libxl'
-        ExplicitWidth = 719
-        ExplicitHeight = 613
+        ExplicitHeight = 376
         object __pnBase_03_Libxl: TPanel
           Left = 0
           Top = 0
           Width = 209
-          Height = 376
+          Height = 380
           Align = alClient
           BevelOuter = bvNone
           Color = clSilver
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 719
-          ExplicitHeight = 613
+          ExplicitHeight = 376
         end
       end
     end
@@ -366,7 +359,7 @@ object FormMain: TFormMain
       Left = 209
       Top = 0
       Width = 240
-      Height = 376
+      Height = 380
       Cursor = crIBeam
       ActiveLineSettings.ShowActiveLine = False
       ActiveLineSettings.ShowActiveLineIndicator = False
@@ -475,6 +468,7 @@ object FormMain: TFormMain
       UseStyler = True
       Version = '3.4.1.0'
       WordWrap = wwNone
+      ExplicitHeight = 376
     end
   end
   object BarMgr: TdxBarManager
