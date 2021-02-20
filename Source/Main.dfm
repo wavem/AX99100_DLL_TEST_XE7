@@ -41,9 +41,9 @@ object FormMain: TFormMain
     Top = 122
     Width = 1018
     Height = 617
-    Align = alClient
+    Align = alTop
     BevelOuter = bvNone
-    Color = cl3DDkShadow
+    Color = 3355443
     ParentBackground = False
     TabOrder = 5
     ExplicitTop = 126
@@ -52,26 +52,29 @@ object FormMain: TFormMain
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
-      Width = 209
-      Height = 617
-      Align = alLeft
+      Width = 1018
+      Height = 472
+      Align = alClient
       TabOrder = 0
+      ExplicitWidth = 209
       ExplicitHeight = 376
       object TPage
         Left = 0
         Top = 0
         Caption = 'Bright'
+        ExplicitWidth = 209
         ExplicitHeight = 376
         object __pnBase_01_Bright: TPanel
           Left = 0
           Top = 0
-          Width = 209
-          Height = 617
+          Width = 1018
+          Height = 472
           Align = alClient
           BevelOuter = bvNone
-          Color = cl3DDkShadow
+          Color = 3355443
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 209
           ExplicitHeight = 376
         end
       end
@@ -80,17 +83,19 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 1
         Caption = 'Memory'
+        ExplicitWidth = 209
         ExplicitHeight = 376
         object __pnBase_02_Memory: TPanel
           Left = 0
           Top = 0
-          Width = 209
-          Height = 617
+          Width = 1018
+          Height = 472
           Align = alClient
           BevelOuter = bvNone
-          Color = clBlack
+          Color = 3355443
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 209
           ExplicitHeight = 376
           object lb_Offset: TLabel
             Left = 48
@@ -341,30 +346,32 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 2
         Caption = 'Libxl'
+        ExplicitWidth = 209
         ExplicitHeight = 376
         object __pnBase_03_Libxl: TPanel
           Left = 0
           Top = 0
-          Width = 209
-          Height = 617
+          Width = 1018
+          Height = 472
           Align = alClient
           BevelOuter = bvNone
-          Color = clSilver
+          Color = 3355443
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 209
           ExplicitHeight = 376
         end
       end
     end
     object memo: TAdvMemo
-      Left = 778
-      Top = 0
-      Width = 240
-      Height = 617
+      Left = 0
+      Top = 472
+      Width = 1018
+      Height = 145
       Cursor = crIBeam
       ActiveLineSettings.ShowActiveLine = False
       ActiveLineSettings.ShowActiveLineIndicator = False
-      Align = alRight
+      Align = alBottom
       AutoCompletion.Font.Charset = DEFAULT_CHARSET
       AutoCompletion.Font.Color = clWindowText
       AutoCompletion.Font.Height = -11
@@ -469,8 +476,6 @@ object FormMain: TFormMain
       UseStyler = True
       Version = '3.4.1.0'
       WordWrap = wwNone
-      ExplicitLeft = 209
-      ExplicitHeight = 376
     end
   end
   object BarMgr: TdxBarManager
