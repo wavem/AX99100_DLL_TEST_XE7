@@ -503,6 +503,7 @@ object FormMain: TFormMain
           object cxTrackBar1: TcxTrackBar
             Left = 344
             Top = 200
+            Cursor = crHandPoint
             TabOrder = 3
             Height = 76
             Width = 196
@@ -514,8 +515,6 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 1
         Caption = 'Memory'
-        ExplicitWidth = 209
-        ExplicitHeight = 376
         object __pnBase_02_Memory: TPanel
           Left = 0
           Top = 0
@@ -526,8 +525,6 @@ object FormMain: TFormMain
           Color = 3355443
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 209
-          ExplicitHeight = 376
           object lb_Offset: TLabel
             Left = 48
             Top = 226
