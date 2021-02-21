@@ -75,6 +75,9 @@
 #include "AdvCombo.hpp"
 #include "AdvSmoothComboBox.hpp"
 #include "AdvSmoothListBox.hpp"
+#include "cxContainer.hpp"
+#include "cxEdit.hpp"
+#include "cxTrackBar.hpp"
 //---------------------------------------------------------------------------
 
 #define	LBERR_SUCCESS						(0x00)
@@ -158,6 +161,7 @@ __published:	// IDE-managed Components
 	TAdvSmoothComboBox *cb_SendPeriod;
 	TAdvGlassButton *btn_Clear_Right;
 	TAdvGlassButton *AdvGlassButton1;
+	TcxTrackBar *cxTrackBar1;
 	void __fastcall ClickMenuButton(TObject *Sender);
 	void __fastcall btn_OpenClick(TObject *Sender);
 	void __fastcall btn_CloseClick(TObject *Sender);

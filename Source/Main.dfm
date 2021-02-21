@@ -25,7 +25,6 @@ object FormMain: TFormMain
     Contexts = <>
     TabOrder = 0
     TabStop = False
-    ExplicitWidth = 449
     object Menutab_1: TdxRibbonTab
       Active = True
       Caption = 'Menu'
@@ -46,9 +45,6 @@ object FormMain: TFormMain
     Color = 3355443
     ParentBackground = False
     TabOrder = 5
-    ExplicitTop = 126
-    ExplicitWidth = 449
-    ExplicitHeight = 376
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
@@ -56,14 +52,10 @@ object FormMain: TFormMain
       Height = 472
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 209
-      ExplicitHeight = 376
       object TPage
         Left = 0
         Top = 0
         Caption = 'Bright'
-        ExplicitWidth = 209
-        ExplicitHeight = 376
         object __pnBase_01_Bright: TPanel
           Left = 0
           Top = 0
@@ -74,8 +66,6 @@ object FormMain: TFormMain
           Color = 3355443
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 209
-          ExplicitHeight = 376
           object lb_Setting_Title_Clear_Right: TLabel
             Left = 24
             Top = 28
@@ -509,6 +499,13 @@ object FormMain: TFormMain
             ShineColor = clGray
             TabOrder = 2
             Version = '1.3.0.2'
+          end
+          object cxTrackBar1: TcxTrackBar
+            Left = 344
+            Top = 200
+            TabOrder = 3
+            Height = 76
+            Width = 196
           end
         end
       end
