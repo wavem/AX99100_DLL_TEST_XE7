@@ -74,7 +74,7 @@
 #pragma link "AdvSmoothComboBox"
 #pragma link "AdvSmoothListBox"
 #pragma resource "*.dfm"
-#pragma link "MVBDLL.lib"
+//#pragma link "MVBDLL.lib"
 #pragma link "DU.lib"
 TFormMain *FormMain;
 //---------------------------------------------------------------------------
@@ -154,13 +154,14 @@ void __fastcall TFormMain::btn_OpenClick(TObject *Sender)
 
 void __fastcall TFormMain::btn_CloseClick(TObject *Sender)
 {
-	int t_rst = LBPortClose();
-	PrintMsg(ResultString(t_rst));
+	//int t_rst = LBPortClose();
+	//PrintMsg(ResultString(t_rst));
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFormMain::btn_ReadClick(TObject *Sender)
 {
+#if 0
 	UnicodeString tempStr = L"";
 	UnicodeString rstStr = L"Read : ";
 	unsigned long t_Offset = 0;
@@ -196,11 +197,13 @@ void __fastcall TFormMain::btn_ReadClick(TObject *Sender)
 
 	PrintMsg(rstStr);
 	if(t_pBuffer) delete t_pBuffer;
+#endif
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFormMain::btn_WriteClick(TObject *Sender)
 {
+#if 0
 	UnicodeString tempStr = L"";
 	UnicodeString rstStr = L"Write : ";
 	unsigned long t_Offset = 0;
@@ -241,5 +244,6 @@ void __fastcall TFormMain::btn_WriteClick(TObject *Sender)
 
 	PrintMsg(rstStr);
 	if(t_pBuffer) delete t_pBuffer;
+#endif
 }
 //---------------------------------------------------------------------------
