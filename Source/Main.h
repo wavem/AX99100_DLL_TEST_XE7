@@ -77,12 +77,38 @@
 #include "AdvSmoothListBox.hpp"
 //---------------------------------------------------------------------------
 
-#define	LBERR_SUCCESS					(0x00)
-#define	LBERR_NOTEXIST_PORT				(0x01)
-#define LBERR_MANYEXIST_PORT			(0x02)
-#define LBERR_PORT_OPEN_ERR				(0x03)
-#define LBERR_NOTOPEN_PORT				(0x04)
-#define LBERR_BUSWIDTH_PORT				(0x05)
+#define	LBERR_SUCCESS						(0x00)
+#define	LBERR_NOTEXIST_PORT					(0x01)
+#define LBERR_MANYEXIST_PORT				(0x02)
+#define LBERR_PORT_OPEN_ERR					(0x03)
+#define LBERR_NOTOPEN_PORT					(0x04)
+#define LBERR_BUSWIDTH_PORT					(0x05)
+#define LBERR_EXCEED_MAXLAN					(0x06)
+
+#define	FTDI_OK								(0x00)		/* No Error */
+#define	FTDI_INVALID_HANDLE					(0x01)		/* The handle provided as a parameter is invalid. */
+#define	FTDI_DEVICE_NOT_FOUND				(0x02)		/* The specified device was not found */
+#define	FTDI_DEVICE_NOT_OPENED				(0x03)		/* Tried to access a device that was not opened before */
+#define	FTDI_IO_ERROR						(0x04)		/* A general I/O error has occurred. */
+#define	FTDI_INSUFFICIENT_RESOURCES			(0x05)		/* Not enough resources to perform the operation. */
+#define	FTDI_INVALID_PARAMETER				(0x06)		/* A parameter provided to an operation was invalid. */
+#define	FTDI_INVALID_BAUD_RATE				(0x07)		/* The baud rate is invalid. */
+
+#define	FTDI_DEVICE_NOT_OPENED_FOR_ERASE	(0x08)		/* Tried to erase on a device that was not opened with erase permission. */
+#define	FTDI_DEVICE_NOT_OPENED_FOR_WRITE	(0x09)		/* Tried to write on a device that was not opened with write permission. */
+#define	FTDI_FAILED_TO_WRITE_DEVICE			(0x0A)		/* Writing to the device has failed. */
+#define	FTDI_EEPROM_READ_FAILED				(0x0B)		/* Failed to read from the EEPROM. */
+#define	FTDI_EEPROM_WRITE_FAILED			(0x0C)		/* Failed to write to the EEPROM. */
+#define	FTDI_EEPROM_ERASE_FAILED			(0x0D)		/* Failed to erase the EEPROM */
+#define	FTDI_EEPROM_NOT_PRESENT				(0x0E)		/* The EEPROM is not present on the device. */
+#define	FTDI_EEPROM_NOT_PROGRAMMED			(0x0F)		/* The EEPROM is not programmed. */
+#define	FTDI_INVALID_ARGS					(0x10)		/* The arguments provided to an operation are invalid. */
+#define	FTDI_NOT_SUPPORTED					(0x11)		/* The operation is not supported for the current device. */
+#define	FTDI_OTHER_ERROR					(0x12)		/* An error has occurred that can not be described in more detail. */
+#define	FTDI_DEVICE_LIST_NOT_READY			(0x13)		/* ? */
+
+#define	FTDI_INPUT_BUF_CHECK_FAILED			(0x14)		/* Get ACK Bit and detect a time-out condition... */
+#define FTDI_DEVICE_BUSY_FAILED				(0x15)		/* The previous IO command is running... */
 
 extern "C" __declspec(dllexport) DWORD LBPortOpen();
 extern "C" __declspec(dllexport) DWORD LBPortClose();
