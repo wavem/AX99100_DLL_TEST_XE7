@@ -75,6 +75,7 @@
 #pragma link "AdvSmoothListBox"
 #pragma resource "*.dfm"
 #pragma link "MVBDLL.lib"
+#pragma link "DU.lib"
 TFormMain *FormMain;
 //---------------------------------------------------------------------------
 __fastcall TFormMain::TFormMain(TComponent* Owner)
