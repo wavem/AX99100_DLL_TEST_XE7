@@ -110,10 +110,23 @@
 #define	FTDI_INPUT_BUF_CHECK_FAILED			(0x14)		/* Get ACK Bit and detect a time-out condition... */
 #define FTDI_DEVICE_BUSY_FAILED				(0x15)		/* The previous IO command is running... */
 
+//extern "C" __declspec(dllexport) DWORD LBPortOpen();
+//extern "C" __declspec(dllexport) DWORD LBPortClose();
+//extern "C" __declspec(dllexport) DWORD LBPortRead(unsigned long ulOffset, unsigned long ulSize, unsigned char ucPosBar, unsigned char* pBuffer);
+//extern "C" __declspec(dllexport) DWORD LBPortWrite(unsigned long ulOffset, unsigned long ulSize, unsigned char ucPosBar, unsigned char* pBuffer);
+
 extern "C" __declspec(dllexport) DWORD LBPortOpen();
 extern "C" __declspec(dllexport) DWORD LBPortClose();
 extern "C" __declspec(dllexport) DWORD LBPortRead(unsigned long ulOffset, unsigned long ulSize, unsigned char ucPosBar, unsigned char* pBuffer);
 extern "C" __declspec(dllexport) DWORD LBPortWrite(unsigned long ulOffset, unsigned long ulSize, unsigned char ucPosBar, unsigned char* pBuffer);
+
+extern "C" __declspec(dllexport) DWORD FTDIPortOpen();
+extern "C" __declspec(dllexport) DWORD FTDIPortClose();
+extern "C" __declspec(dllexport) DWORD GetTemp(int* pValue);
+extern "C" __declspec(dllexport) DWORD GetLux(int* pValue);
+extern "C" __declspec(dllexport) DWORD GetHrs(BYTE channel, BYTE* pData);
+extern "C" __declspec(dllexport) DWORD SetBl(int Value);
+extern "C" __declspec(dllexport) DWORD GetBl(int* pValue);
 
 class TFormMain : public TForm
 {
