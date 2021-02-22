@@ -150,8 +150,8 @@ UnicodeString TFormMain::ResultString(int _rst) {
 
 void __fastcall TFormMain::btn_OpenClick(TObject *Sender)
 {
-	//int t_rst = LBPortOpen();
-	//PrintMsg(ResultString(t_rst));
+	int t_rst = LBPortOpen();
+	PrintMsg(ResultString(t_rst));
 }
 //---------------------------------------------------------------------------
 
