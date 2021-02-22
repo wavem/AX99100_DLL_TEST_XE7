@@ -78,6 +78,7 @@
 #include "cxContainer.hpp"
 #include "cxEdit.hpp"
 #include "cxTrackBar.hpp"
+#include "AdvGroupBox.hpp"
 //---------------------------------------------------------------------------
 
 #define	LBERR_SUCCESS						(0x00)
@@ -147,22 +148,44 @@ __published:	// IDE-managed Components
 	TPanel *__pnBase_02_Memory;
 	TdxBarLargeButton *btn_Menu_3;
 	TPanel *__pnBase_03_Libxl;
+	TAdvGroupBox *Group_1;
+	TAdvGlassButton *btn_Clear_Right;
+	TAdvGlassButton *AdvGlassButton1;
+	TAdvGroupBox *AdvGroupBox1;
+	TAdvGroupBox *AdvGroupBox2;
+	TAdvGroupBox *AdvGroupBox4;
+	TLabel *Label1;
+	TAdvGlassButton *AdvGlassButton2;
+	TAdvGlassButton *AdvGlassButton3;
+	TLabel *Label3;
+	TAdvEdit *AdvEdit3;
+	TAdvGlassButton *AdvGlassButton4;
+	TAdvGlassButton *AdvGlassButton5;
+	TAdvEdit *AdvEdit4;
+	TAdvSmoothComboBox *cb_SendPeriod;
+	TcxTrackBar *cxTrackBar1;
+	TAdvGroupBox *AdvGroupBox3;
+	TAdvGlassButton *AdvGlassButton6;
+	TAdvGlassButton *AdvGlassButton7;
 	TAdvGlassButton *btn_Open;
 	TAdvGlassButton *btn_Close;
 	TAdvGlassButton *btn_Read;
 	TAdvGlassButton *btn_Write;
-	TLabel *lb_Offset;
-	TAdvEdit *ed_Offset;
 	TLabel *lb_Length;
+	TLabel *lb_Offset;
 	TLabel *lb_Value;
 	TAdvEdit *ed_Value;
+	TAdvEdit *ed_Offset;
 	TAdvComboBox *cb_Length;
-	TLabel *lb_Setting_Title_Clear_Right;
-	TAdvSmoothComboBox *cb_SendPeriod;
-	TAdvGlassButton *btn_Clear_Right;
-	TAdvGlassButton *AdvGlassButton1;
-	TcxTrackBar *cxTrackBar1;
+	TAdvGroupBox *AdvGroupBox5;
+	TAdvGlassButton *AdvGlassButton8;
+	TAdvGlassButton *AdvGlassButton9;
 	TAdvEdit *AdvEdit1;
+	TLabel *Label2;
+	TLabel *Label4;
+	TLabel *Label5;
+	TAdvEdit *AdvEdit2;
+	TAdvEdit *AdvEdit5;
 	void __fastcall ClickMenuButton(TObject *Sender);
 	void __fastcall btn_OpenClick(TObject *Sender);
 	void __fastcall btn_CloseClick(TObject *Sender);

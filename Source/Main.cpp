@@ -76,6 +76,7 @@
 #pragma link "cxContainer"
 #pragma link "cxEdit"
 #pragma link "cxTrackBar"
+#pragma link "AdvGroupBox"
 #pragma resource "*.dfm"
 //#pragma link "MVBDLL.lib"
 #pragma link "DU.lib"
@@ -250,3 +251,4 @@ void __fastcall TFormMain::btn_WriteClick(TObject *Sender)
 #endif
 }
 //---------------------------------------------------------------------------
+

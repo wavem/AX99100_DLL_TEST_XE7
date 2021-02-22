@@ -3,8 +3,8 @@ object FormMain: TFormMain
   Top = 0
   BorderStyle = bsDialog
   Caption = 'AX99100 TEST XE7'
-  ClientHeight = 739
-  ClientWidth = 1018
+  ClientHeight = 578
+  ClientWidth = 514
   Color = clBtnFace
   DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET
@@ -19,13 +19,14 @@ object FormMain: TFormMain
   object RibbonMenu: TdxRibbon
     Left = 0
     Top = 0
-    Width = 1018
+    Width = 514
     Height = 122
     BarManager = BarMgr
     ColorSchemeName = 'MetropolisDark'
     Contexts = <>
     TabOrder = 0
     TabStop = False
+    ExplicitWidth = 1018
     object Menutab_1: TdxRibbonTab
       Active = True
       Caption = 'Menu'
@@ -39,52 +40,674 @@ object FormMain: TFormMain
   object ___pnBase: TPanel
     Left = 0
     Top = 122
-    Width = 1018
+    Width = 514
     Height = 617
     Align = alTop
     BevelOuter = bvNone
     Color = 3355443
     ParentBackground = False
     TabOrder = 5
+    ExplicitWidth = 1018
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
-      Width = 1018
-      Height = 472
-      Align = alClient
+      Width = 514
+      Height = 385
+      Align = alTop
+      PageIndex = 1
       TabOrder = 0
+      ExplicitWidth = 700
       object TPage
         Left = 0
         Top = 0
         Caption = 'Bright'
+        ExplicitWidth = 1018
+        ExplicitHeight = 472
         object __pnBase_01_Bright: TPanel
           Left = 0
           Top = 0
-          Width = 1018
-          Height = 472
+          Width = 514
+          Height = 385
           Align = alClient
           BevelOuter = bvNone
           Color = 3355443
           ParentBackground = False
           TabOrder = 0
-          object lb_Setting_Title_Clear_Right: TLabel
+          ExplicitWidth = 521
+          ExplicitHeight = 329
+          object Group_1: TAdvGroupBox
             Left = 24
-            Top = 28
-            Width = 39
-            Height = 14
-            Caption = 'Device'
-            Color = 2129339
+            Top = 19
+            Width = 137
+            Height = 114
+            BorderColor = cl3DDkShadow
+            Caption = '  Device  '
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = 2262986
-            Font.Height = -12
+            Font.Color = 2129339
+            Font.Height = -11
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
-            ParentColor = False
+            ParentFont = False
+            TabOrder = 0
+            object btn_Clear_Right: TAdvGlassButton
+              Left = 18
+              Top = 26
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'OPEN'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 0
+              Version = '1.3.0.2'
+            end
+            object AdvGlassButton1: TAdvGlassButton
+              Left = 18
+              Top = 64
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'CLOSE'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 1
+              Version = '1.3.0.2'
+            end
+          end
+          object AdvGroupBox1: TAdvGroupBox
+            Left = 177
+            Top = 19
+            Width = 312
+            Height = 114
+            BorderColor = cl3DDkShadow
+            Caption = '  Sensor Test  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 2129339
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+            object Label1: TLabel
+              Left = 25
+              Top = 32
+              Width = 86
+              Height = 14
+              Caption = 'Temperature :'
+              Color = 2129339
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -12
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label3: TLabel
+              Left = 30
+              Top = 73
+              Width = 81
+              Height = 14
+              Caption = 'Illumination :'
+              Color = 2129339
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -12
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object AdvEdit3: TAdvEdit
+              Left = 120
+              Top = 31
+              Width = 50
+              Height = 20
+              BorderColor = cl3DDkShadow
+              EditAlign = eaRight
+              EditType = etNumeric
+              EmptyTextStyle = []
+              FocusFontColor = 2129339
+              LabelFont.Charset = DEFAULT_CHARSET
+              LabelFont.Color = clWindowText
+              LabelFont.Height = -11
+              LabelFont.Name = 'Tahoma'
+              LabelFont.Style = []
+              Lookup.Font.Charset = DEFAULT_CHARSET
+              Lookup.Font.Color = clWindowText
+              Lookup.Font.Height = -11
+              Lookup.Font.Name = 'Arial'
+              Lookup.Font.Style = []
+              Lookup.Separator = ';'
+              Color = 3355443
+              ReadOnly = True
+              TabOrder = 0
+              Text = '0'
+              Visible = True
+              Version = '3.3.5.3'
+            end
+            object AdvGlassButton4: TAdvGlassButton
+              Left = 183
+              Top = 26
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'READ'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 1
+              Version = '1.3.0.2'
+            end
+            object AdvGlassButton5: TAdvGlassButton
+              Left = 183
+              Top = 64
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'READ'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 2
+              Version = '1.3.0.2'
+            end
+            object AdvEdit4: TAdvEdit
+              Left = 120
+              Top = 71
+              Width = 50
+              Height = 20
+              BorderColor = cl3DDkShadow
+              EditAlign = eaRight
+              EditType = etNumeric
+              EmptyTextStyle = []
+              FocusFontColor = 2129339
+              LabelFont.Charset = DEFAULT_CHARSET
+              LabelFont.Color = clWindowText
+              LabelFont.Height = -11
+              LabelFont.Name = 'Tahoma'
+              LabelFont.Style = []
+              Lookup.Font.Charset = DEFAULT_CHARSET
+              Lookup.Font.Color = clWindowText
+              Lookup.Font.Height = -11
+              Lookup.Font.Name = 'Arial'
+              Lookup.Font.Style = []
+              Lookup.Separator = ';'
+              Color = 3355443
+              ReadOnly = True
+              TabOrder = 3
+              Text = '0'
+              Visible = True
+              Version = '3.3.5.3'
+            end
+          end
+          object AdvGroupBox2: TAdvGroupBox
+            Left = 177
+            Top = 152
+            Width = 312
+            Height = 114
+            BorderColor = cl3DDkShadow
+            Caption = '  Brightness Test  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 2129339
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 2
+            object cxTrackBar1: TcxTrackBar
+              Left = 25
+              Top = 22
+              Cursor = crHandPoint
+              Properties.ShowPositionHint = True
+              Style.HotTrack = False
+              Style.LookAndFeel.Kind = lfUltraFlat
+              Style.LookAndFeel.NativeStyle = False
+              Style.LookAndFeel.SkinName = 'DevExpressStyle'
+              Style.Shadow = False
+              StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+              StyleDisabled.LookAndFeel.NativeStyle = False
+              StyleDisabled.LookAndFeel.SkinName = 'DevExpressStyle'
+              StyleFocused.LookAndFeel.Kind = lfUltraFlat
+              StyleFocused.LookAndFeel.NativeStyle = False
+              StyleFocused.LookAndFeel.SkinName = 'DevExpressStyle'
+              StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleHot.LookAndFeel.NativeStyle = False
+              StyleHot.LookAndFeel.SkinName = 'DevExpressStyle'
+              TabOrder = 0
+              Transparent = True
+              Height = 76
+              Width = 248
+            end
+          end
+          object AdvGroupBox4: TAdvGroupBox
+            Left = 24
+            Top = 152
+            Width = 137
+            Height = 114
+            BorderColor = cl3DDkShadow
+            Caption = '  Switch Test  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 2129339
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 3
+            object AdvGlassButton2: TAdvGlassButton
+              Left = 18
+              Top = 26
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'S/W 0'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 0
+              Version = '1.3.0.2'
+            end
+            object AdvGlassButton3: TAdvGlassButton
+              Left = 18
+              Top = 64
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'S/W 1'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 1
+              Version = '1.3.0.2'
+            end
+          end
+        end
+      end
+      object TPage
+        Left = 0
+        Top = 0
+        HelpContext = 1
+        Caption = 'Memory'
+        ExplicitWidth = 1018
+        ExplicitHeight = 472
+        object __pnBase_02_Memory: TPanel
+          Left = 0
+          Top = 0
+          Width = 514
+          Height = 385
+          Align = alClient
+          BevelOuter = bvNone
+          Color = 3355443
+          ParentBackground = False
+          TabOrder = 0
+          ExplicitWidth = 1018
+          ExplicitHeight = 472
+          object AdvGroupBox3: TAdvGroupBox
+            Left = 24
+            Top = 19
+            Width = 137
+            Height = 114
+            BorderColor = cl3DDkShadow
+            Caption = '  Device  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 2129339
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 0
+            object AdvGlassButton6: TAdvGlassButton
+              Left = 18
+              Top = 26
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'OPEN'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 0
+              Version = '1.3.0.2'
+            end
+            object AdvGlassButton7: TAdvGlassButton
+              Left = 18
+              Top = 64
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'CLOSE'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 1
+              Version = '1.3.0.2'
+            end
+          end
+          object AdvGroupBox5: TAdvGroupBox
+            Left = 177
+            Top = 19
+            Width = 200
+            Height = 230
+            BorderColor = cl3DDkShadow
+            Caption = '  Device  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 2129339
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+            object Label2: TLabel
+              Left = 28
+              Top = 31
+              Width = 52
+              Height = 14
+              Caption = 'Length :'
+              Color = 2129339
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -12
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label4: TLabel
+              Left = 34
+              Top = 63
+              Width = 46
+              Height = 14
+              Caption = 'Offset :'
+              Color = 2129339
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -12
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label5: TLabel
+              Left = 39
+              Top = 95
+              Width = 41
+              Height = 14
+              Caption = 'Value :'
+              Color = 2129339
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -12
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object AdvGlassButton8: TAdvGlassButton
+              Left = 52
+              Top = 138
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'READ'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 1
+              Version = '1.3.0.2'
+            end
+            object AdvGlassButton9: TAdvGlassButton
+              Left = 52
+              Top = 176
+              Width = 100
+              Height = 32
+              Cursor = crHandPoint
+              BackColor = 3355443
+              Caption = 'WRITE'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 2262986
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ForeColor = clWhite
+              GlowColor = clOlive
+              InnerBorderColor = 3355443
+              OuterBorderColor = cl3DDkShadow
+              ParentFont = False
+              ShineColor = clGray
+              TabOrder = 2
+              Version = '1.3.0.2'
+            end
+            object AdvEdit1: TAdvEdit
+              Left = 89
+              Top = 30
+              Width = 80
+              Height = 19
+              EditAlign = eaRight
+              EditType = etNumeric
+              EmptyTextStyle = []
+              MaxValue = 65535
+              LabelFont.Charset = DEFAULT_CHARSET
+              LabelFont.Color = clWindowText
+              LabelFont.Height = -11
+              LabelFont.Name = 'Tahoma'
+              LabelFont.Style = []
+              Lookup.Font.Charset = DEFAULT_CHARSET
+              Lookup.Font.Color = clWindowText
+              Lookup.Font.Height = -11
+              Lookup.Font.Name = 'Arial'
+              Lookup.Font.Style = []
+              Lookup.Separator = ';'
+              Color = clWindow
+              MaxLength = 5
+              TabOrder = 0
+              Text = '0'
+              Visible = True
+              Version = '3.3.5.3'
+            end
+            object AdvEdit2: TAdvEdit
+              Left = 89
+              Top = 62
+              Width = 80
+              Height = 19
+              EditAlign = eaRight
+              EditType = etNumeric
+              EmptyTextStyle = []
+              MaxValue = 65535
+              LabelFont.Charset = DEFAULT_CHARSET
+              LabelFont.Color = clWindowText
+              LabelFont.Height = -11
+              LabelFont.Name = 'Tahoma'
+              LabelFont.Style = []
+              Lookup.Font.Charset = DEFAULT_CHARSET
+              Lookup.Font.Color = clWindowText
+              Lookup.Font.Height = -11
+              Lookup.Font.Name = 'Arial'
+              Lookup.Font.Style = []
+              Lookup.Separator = ';'
+              Color = clWindow
+              MaxLength = 5
+              TabOrder = 3
+              Text = '0'
+              Visible = True
+              Version = '3.3.5.3'
+            end
+            object AdvEdit5: TAdvEdit
+              Left = 89
+              Top = 94
+              Width = 80
+              Height = 19
+              EditAlign = eaRight
+              EditType = etHex
+              EmptyTextStyle = []
+              LabelFont.Charset = DEFAULT_CHARSET
+              LabelFont.Color = clWindowText
+              LabelFont.Height = -11
+              LabelFont.Name = 'Tahoma'
+              LabelFont.Style = []
+              Lookup.Font.Charset = DEFAULT_CHARSET
+              Lookup.Font.Color = clWindowText
+              Lookup.Font.Height = -11
+              Lookup.Font.Name = 'Arial'
+              Lookup.Font.Style = []
+              Lookup.Separator = ';'
+              CharCase = ecUpperCase
+              Color = clWindow
+              MaxLength = 8
+              TabOrder = 4
+              Text = '0'
+              Visible = True
+              Version = '3.3.5.3'
+            end
+          end
+        end
+      end
+      object TPage
+        Left = 0
+        Top = 0
+        HelpContext = 2
+        Caption = 'Libxl'
+        ExplicitWidth = 1018
+        ExplicitHeight = 472
+        object __pnBase_03_Libxl: TPanel
+          Left = 0
+          Top = 0
+          Width = 514
+          Height = 385
+          Align = alClient
+          BevelOuter = bvNone
+          Color = 3355443
+          ParentBackground = False
+          TabOrder = 0
+          ExplicitWidth = 1018
+          ExplicitHeight = 472
+          object lb_Length: TLabel
+            Left = 26
+            Top = 169
+            Width = 45
+            Height = 16
+            Alignment = taRightJustify
+            Caption = 'Length'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clLime
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object lb_Offset: TLabel
+            Left = 31
+            Top = 202
+            Width = 40
+            Height = 16
+            Alignment = taRightJustify
+            Caption = 'Offset'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clLime
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object lb_Value: TLabel
+            Left = 35
+            Top = 235
+            Width = 36
+            Height = 16
+            Alignment = taRightJustify
+            Caption = 'Value'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clLime
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
             ParentFont = False
           end
           object cb_SendPeriod: TAdvSmoothComboBox
-            Left = 346
-            Top = 36
+            Left = 370
+            Top = 6
             Width = 103
             Height = 30
             Cursor = crHandPoint
@@ -457,159 +1080,9 @@ object FormMain: TFormMain
             DropDownWidth = 112
             TMSStyle = 4
           end
-          object btn_Clear_Right: TAdvGlassButton
-            Left = 24
-            Top = 58
-            Width = 100
-            Height = 32
-            Cursor = crHandPoint
-            BackColor = 3355443
-            Caption = 'OPEN'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = 2262986
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ForeColor = clWhite
-            GlowColor = clOlive
-            InnerBorderColor = 3355443
-            OuterBorderColor = cl3DDkShadow
-            ParentFont = False
-            ShineColor = clGray
-            TabOrder = 1
-            Version = '1.3.0.2'
-          end
-          object AdvGlassButton1: TAdvGlassButton
-            Left = 24
-            Top = 96
-            Width = 100
-            Height = 32
-            Cursor = crHandPoint
-            BackColor = 3355443
-            Caption = 'CLOSE'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = 2262986
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ForeColor = clWhite
-            GlowColor = clOlive
-            InnerBorderColor = 3355443
-            OuterBorderColor = cl3DDkShadow
-            ParentFont = False
-            ShineColor = clGray
-            TabOrder = 2
-            Version = '1.3.0.2'
-          end
-          object cxTrackBar1: TcxTrackBar
-            Left = 312
-            Top = 280
-            Cursor = crHandPoint
-            Properties.ShowPositionHint = True
-            Style.HotTrack = False
-            Style.LookAndFeel.Kind = lfUltraFlat
-            Style.LookAndFeel.NativeStyle = False
-            Style.LookAndFeel.SkinName = 'DevExpressStyle'
-            Style.Shadow = False
-            StyleDisabled.LookAndFeel.Kind = lfUltraFlat
-            StyleDisabled.LookAndFeel.NativeStyle = False
-            StyleDisabled.LookAndFeel.SkinName = 'DevExpressStyle'
-            StyleFocused.LookAndFeel.Kind = lfUltraFlat
-            StyleFocused.LookAndFeel.NativeStyle = False
-            StyleFocused.LookAndFeel.SkinName = 'DevExpressStyle'
-            StyleHot.LookAndFeel.Kind = lfUltraFlat
-            StyleHot.LookAndFeel.NativeStyle = False
-            StyleHot.LookAndFeel.SkinName = 'DevExpressStyle'
-            TabOrder = 3
-            Transparent = True
-            Height = 76
-            Width = 196
-          end
-          object AdvEdit1: TAdvEdit
-            Left = 224
-            Top = 136
-            Width = 121
-            Height = 21
-            EmptyTextStyle = []
-            LabelFont.Charset = DEFAULT_CHARSET
-            LabelFont.Color = clWindowText
-            LabelFont.Height = -11
-            LabelFont.Name = 'Tahoma'
-            LabelFont.Style = []
-            Lookup.Font.Charset = DEFAULT_CHARSET
-            Lookup.Font.Color = clWindowText
-            Lookup.Font.Height = -11
-            Lookup.Font.Name = 'Arial'
-            Lookup.Font.Style = []
-            Lookup.Separator = ';'
-            Color = clWindow
-            TabOrder = 4
-            Text = 'AdvEdit1'
-            Visible = True
-            Version = '3.3.5.3'
-          end
-        end
-      end
-      object TPage
-        Left = 0
-        Top = 0
-        HelpContext = 1
-        Caption = 'Memory'
-        object __pnBase_02_Memory: TPanel
-          Left = 0
-          Top = 0
-          Width = 1018
-          Height = 472
-          Align = alClient
-          BevelOuter = bvNone
-          Color = 3355443
-          ParentBackground = False
-          TabOrder = 0
-          object lb_Offset: TLabel
-            Left = 48
-            Top = 226
-            Width = 40
-            Height = 16
-            Alignment = taRightJustify
-            Caption = 'Offset'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clLime
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object lb_Length: TLabel
-            Left = 43
-            Top = 193
-            Width = 45
-            Height = 16
-            Alignment = taRightJustify
-            Caption = 'Length'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clLime
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object lb_Value: TLabel
-            Left = 52
-            Top = 259
-            Width = 36
-            Height = 16
-            Alignment = taRightJustify
-            Caption = 'Value'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clLime
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
           object btn_Open: TAdvGlassButton
-            Left = 24
-            Top = 21
+            Left = 23
+            Top = 19
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -628,13 +1101,13 @@ object FormMain: TFormMain
             OuterBorderColor = clLime
             ParentFont = False
             ShineColor = clGray
-            TabOrder = 0
+            TabOrder = 1
             Version = '1.3.0.2'
             OnClick = btn_OpenClick
           end
           object btn_Close: TAdvGlassButton
-            Left = 24
-            Top = 59
+            Left = 23
+            Top = 57
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -653,13 +1126,13 @@ object FormMain: TFormMain
             OuterBorderColor = clLime
             ParentFont = False
             ShineColor = clGray
-            TabOrder = 1
+            TabOrder = 2
             Version = '1.3.0.2'
             OnClick = btn_CloseClick
           end
           object btn_Read: TAdvGlassButton
-            Left = 24
-            Top = 97
+            Left = 23
+            Top = 95
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -678,13 +1151,13 @@ object FormMain: TFormMain
             OuterBorderColor = clLime
             ParentFont = False
             ShineColor = clGray
-            TabOrder = 2
+            TabOrder = 3
             Version = '1.3.0.2'
             OnClick = btn_ReadClick
           end
           object btn_Write: TAdvGlassButton
-            Left = 24
-            Top = 135
+            Left = 23
+            Top = 133
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -703,47 +1176,13 @@ object FormMain: TFormMain
             OuterBorderColor = clLime
             ParentFont = False
             ShineColor = clGray
-            TabOrder = 3
+            TabOrder = 4
             Version = '1.3.0.2'
             OnClick = btn_WriteClick
           end
-          object ed_Offset: TAdvEdit
-            Left = 104
-            Top = 223
-            Width = 73
-            Height = 24
-            EditAlign = eaRight
-            EditType = etNumeric
-            EmptyTextStyle = []
-            MaxValue = 3
-            LabelFont.Charset = DEFAULT_CHARSET
-            LabelFont.Color = clWindowText
-            LabelFont.Height = -11
-            LabelFont.Name = 'Tahoma'
-            LabelFont.Style = []
-            Lookup.Font.Charset = DEFAULT_CHARSET
-            Lookup.Font.Color = clWindowText
-            Lookup.Font.Height = -11
-            Lookup.Font.Name = 'Arial'
-            Lookup.Font.Style = []
-            Lookup.Separator = ';'
-            Color = clWindow
-            DoubleBuffered = True
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            MaxLength = 1
-            ParentFont = False
-            TabOrder = 4
-            Text = '0'
-            Visible = True
-            Version = '3.3.5.3'
-          end
           object ed_Value: TAdvEdit
-            Left = 104
-            Top = 256
+            Left = 87
+            Top = 232
             Width = 73
             Height = 24
             EditAlign = eaRight
@@ -762,7 +1201,6 @@ object FormMain: TFormMain
             Lookup.Font.Style = []
             Lookup.Separator = ';'
             Color = clWindow
-            DoubleBuffered = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
@@ -775,9 +1213,42 @@ object FormMain: TFormMain
             Visible = True
             Version = '3.3.5.3'
           end
+          object ed_Offset: TAdvEdit
+            Left = 87
+            Top = 199
+            Width = 73
+            Height = 24
+            EditAlign = eaRight
+            EditType = etNumeric
+            EmptyTextStyle = []
+            MaxValue = 3
+            LabelFont.Charset = DEFAULT_CHARSET
+            LabelFont.Color = clWindowText
+            LabelFont.Height = -11
+            LabelFont.Name = 'Tahoma'
+            LabelFont.Style = []
+            Lookup.Font.Charset = DEFAULT_CHARSET
+            Lookup.Font.Color = clWindowText
+            Lookup.Font.Height = -11
+            Lookup.Font.Name = 'Arial'
+            Lookup.Font.Style = []
+            Lookup.Separator = ';'
+            Color = clWindow
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            MaxLength = 1
+            ParentFont = False
+            TabOrder = 6
+            Text = '0'
+            Visible = True
+            Version = '3.3.5.3'
+          end
           object cb_Length: TAdvComboBox
-            Left = 104
-            Top = 190
+            Left = 87
+            Top = 166
             Width = 73
             Height = 24
             Color = clWindow
@@ -804,34 +1275,17 @@ object FormMain: TFormMain
             LabelFont.Name = 'Tahoma'
             LabelFont.Style = []
             ParentFont = False
-            TabOrder = 6
+            TabOrder = 7
             Text = '32 bit'
           end
-        end
-      end
-      object TPage
-        Left = 0
-        Top = 0
-        HelpContext = 2
-        Caption = 'Libxl'
-        object __pnBase_03_Libxl: TPanel
-          Left = 0
-          Top = 0
-          Width = 1018
-          Height = 472
-          Align = alClient
-          BevelOuter = bvNone
-          Color = 3355443
-          ParentBackground = False
-          TabOrder = 0
         end
       end
     end
     object memo: TAdvMemo
       Left = 0
-      Top = 472
-      Width = 1018
-      Height = 145
+      Top = 296
+      Width = 514
+      Height = 321
       Cursor = crIBeam
       ActiveLineSettings.ShowActiveLine = False
       ActiveLineSettings.ShowActiveLineIndicator = False
