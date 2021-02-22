@@ -162,6 +162,7 @@ __published:	// IDE-managed Components
 	TAdvGlassButton *btn_Clear_Right;
 	TAdvGlassButton *AdvGlassButton1;
 	TcxTrackBar *cxTrackBar1;
+	TAdvEdit *AdvEdit1;
 	void __fastcall ClickMenuButton(TObject *Sender);
 	void __fastcall btn_OpenClick(TObject *Sender);
 	void __fastcall btn_CloseClick(TObject *Sender);

@@ -525,6 +525,29 @@ object FormMain: TFormMain
             Height = 76
             Width = 196
           end
+          object AdvEdit1: TAdvEdit
+            Left = 224
+            Top = 136
+            Width = 121
+            Height = 21
+            EmptyTextStyle = []
+            LabelFont.Charset = DEFAULT_CHARSET
+            LabelFont.Color = clWindowText
+            LabelFont.Height = -11
+            LabelFont.Name = 'Tahoma'
+            LabelFont.Style = []
+            Lookup.Font.Charset = DEFAULT_CHARSET
+            Lookup.Font.Color = clWindowText
+            Lookup.Font.Height = -11
+            Lookup.Font.Name = 'Arial'
+            Lookup.Font.Style = []
+            Lookup.Separator = ';'
+            Color = clWindow
+            TabOrder = 4
+            Text = 'AdvEdit1'
+            Visible = True
+            Version = '3.3.5.3'
+          end
         end
       end
       object TPage
