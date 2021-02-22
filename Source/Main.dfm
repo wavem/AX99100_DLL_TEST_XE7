@@ -503,6 +503,7 @@ object FormMain: TFormMain
           object cxTrackBar1: TcxTrackBar
             Left = 312
             Top = 280
+            Cursor = crHandPoint
             Style.LookAndFeel.Kind = lfUltraFlat
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.SkinName = 'DevExpressStyle'
@@ -516,6 +517,7 @@ object FormMain: TFormMain
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.SkinName = 'DevExpressStyle'
             TabOrder = 3
+            Transparent = True
             Height = 76
             Width = 196
           end
