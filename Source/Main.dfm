@@ -504,9 +504,12 @@ object FormMain: TFormMain
             Left = 312
             Top = 280
             Cursor = crHandPoint
+            Properties.ShowPositionHint = True
+            Style.HotTrack = False
             Style.LookAndFeel.Kind = lfUltraFlat
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.SkinName = 'DevExpressStyle'
+            Style.Shadow = False
             StyleDisabled.LookAndFeel.Kind = lfUltraFlat
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.SkinName = 'DevExpressStyle'
