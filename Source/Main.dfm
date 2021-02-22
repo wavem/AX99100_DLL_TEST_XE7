@@ -500,15 +500,6 @@ object FormMain: TFormMain
             TabOrder = 2
             Version = '1.3.0.2'
           end
-          object TrackBar: TcxTrackBar
-            Left = 288
-            Top = 184
-            Cursor = crHandPoint
-            TabOrder = 3
-            Transparent = True
-            Height = 76
-            Width = 196
-          end
         end
       end
       object TPage
