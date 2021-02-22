@@ -500,6 +500,13 @@ object FormMain: TFormMain
             TabOrder = 2
             Version = '1.3.0.2'
           end
+          object cxTrackBar1: TcxTrackBar
+            Left = 312
+            Top = 280
+            TabOrder = 3
+            Height = 76
+            Width = 196
+          end
         end
       end
       object TPage
