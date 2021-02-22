@@ -505,6 +505,7 @@ object FormMain: TFormMain
             Top = 184
             Cursor = crHandPoint
             TabOrder = 3
+            Transparent = True
             Height = 76
             Width = 196
           end
