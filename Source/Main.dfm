@@ -1,7 +1,7 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
+  BorderStyle = bsDialog
   Caption = 'AX99100 TEST XE7'
   ClientHeight = 739
   ClientWidth = 1018
