@@ -500,9 +500,9 @@ object FormMain: TFormMain
             TabOrder = 2
             Version = '1.3.0.2'
           end
-          object cxTrackBar1: TcxTrackBar
-            Left = 344
-            Top = 200
+          object TrackBar: TcxTrackBar
+            Left = 288
+            Top = 184
             Cursor = crHandPoint
             TabOrder = 3
             Height = 76
@@ -774,8 +774,6 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 2
         Caption = 'Libxl'
-        ExplicitWidth = 209
-        ExplicitHeight = 376
         object __pnBase_03_Libxl: TPanel
           Left = 0
           Top = 0
@@ -786,8 +784,6 @@ object FormMain: TFormMain
           Color = 3355443
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 209
-          ExplicitHeight = 376
         end
       end
     end
