@@ -199,7 +199,12 @@ public: // START
 	UnicodeString ResultString_FTDI(int _rst);
 	UnicodeString ResultString_LBERR(int _rst);
 
-public: // DUDLL TEST
+public: // Member Variables
+	int m_Temperature;
+	int m_Lux;
+	int m_Hrs;
+	int m_Bl;
+
 
 };
 //---------------------------------------------------------------------------
