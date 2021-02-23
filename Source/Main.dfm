@@ -54,7 +54,6 @@ object FormMain: TFormMain
       Width = 514
       Height = 385
       Align = alTop
-      PageIndex = 1
       TabOrder = 0
       ExplicitWidth = 700
       object TPage
@@ -178,7 +177,7 @@ object FormMain: TFormMain
               ParentColor = False
               ParentFont = False
             end
-            object AdvEdit3: TAdvEdit
+            object ed_FTDI_Temperature: TAdvEdit
               Left = 120
               Top = 31
               Width = 50
@@ -250,7 +249,7 @@ object FormMain: TFormMain
               TabOrder = 2
               Version = '1.3.0.2'
             end
-            object AdvEdit4: TAdvEdit
+            object ed_FTDI_Illumination: TAdvEdit
               Left = 120
               Top = 71
               Width = 50
@@ -463,7 +462,7 @@ object FormMain: TFormMain
             Width = 200
             Height = 230
             BorderColor = cl3DDkShadow
-            Caption = '  Device  '
+            Caption = '  MVB Memory  '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 2129339
             Font.Height = -11

@@ -153,10 +153,10 @@ __published:	// IDE-managed Components
 	TAdvGlassButton *btn_FTDI_SW_Test_0;
 	TAdvGlassButton *btn_FTDI_SW_Test_1;
 	TLabel *lb_FTDI_Title_2;
-	TAdvEdit *AdvEdit3;
+	TAdvEdit *ed_FTDI_Temperature;
 	TAdvGlassButton *btn_FTDI_Read_Temperature;
 	TAdvGlassButton *btn_FTDI_Read_Illumination;
-	TAdvEdit *AdvEdit4;
+	TAdvEdit *ed_FTDI_Illumination;
 	TAdvSmoothComboBox *cb_SendPeriod;
 	TcxTrackBar *TrackBar_FTDI;
 	TAdvGroupBox *Group_MVB_1;
