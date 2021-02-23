@@ -115,7 +115,42 @@ void __fastcall TFormMain::ClickMenuButton(TObject *Sender)
 //---------------------------------------------------------------------------
 
 UnicodeString TFormMain::ResultString_LBERR(int _rst) {
+
 	UnicodeString tempStr = L"";
+
+	switch(_rst) {
+		case LBERR_SUCCESS:
+			tempStr = L"LBERR_SUCCESS";
+			break;
+
+		case LBERR_NOTEXIST_PORT:
+			tempStr = L"LBERR_NOTEXIST_PORT";
+			break;
+
+		case LBERR_MANYEXIST_PORT:
+			tempStr = L"LBERR_MANYEXIST_PORT";
+			break;
+
+		case LBERR_PORT_OPEN_ERR:
+			tempStr = L"LBERR_PORT_OPEN_ERR";
+			break;
+
+		case LBERR_NOTOPEN_PORT:
+			tempStr = L"LBERR_NOTOPEN_PORT";
+			break;
+
+		case LBERR_BUSWIDTH_PORT:
+			tempStr = L"LBERR_BUSWIDTH_PORT";
+			break;
+
+		case LBERR_EXCEED_MAXLAN:
+			tempStr = L"LBERR_EXCEED_MAXLAN";
+			break;
+
+		default:
+			tempStr = L"There is no error code";
+			break;
+	}
 
 	return tempStr;
 }
