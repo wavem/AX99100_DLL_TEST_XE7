@@ -370,3 +370,10 @@ void __fastcall TFormMain::btn_FTDI_Device_OpenClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::btn_FTDI_Device_CloseClick(TObject *Sender)
+{
+	DWORD t_rst = FTDIPortClose();
+	PrintMsg(ResultString_FTDI(t_rst));
+}
+//---------------------------------------------------------------------------
+

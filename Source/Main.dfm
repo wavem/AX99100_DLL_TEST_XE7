@@ -132,6 +132,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 1
               Version = '1.3.0.2'
+              OnClick = btn_FTDI_Device_CloseClick
             end
           end
           object Group_FTDI_2: TAdvGroupBox
