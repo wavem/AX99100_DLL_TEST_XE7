@@ -41,13 +41,14 @@ object FormMain: TFormMain
     Left = 0
     Top = 122
     Width = 514
-    Height = 617
-    Align = alTop
+    Height = 456
+    Align = alClient
     BevelOuter = bvNone
     Color = 3355443
     ParentBackground = False
     TabOrder = 5
     ExplicitWidth = 1018
+    ExplicitHeight = 617
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
@@ -1285,9 +1286,9 @@ object FormMain: TFormMain
     end
     object memo: TAdvMemo
       Left = 0
-      Top = 296
+      Top = 288
       Width = 514
-      Height = 321
+      Height = 168
       Cursor = crIBeam
       ActiveLineSettings.ShowActiveLine = False
       ActiveLineSettings.ShowActiveLineIndicator = False
