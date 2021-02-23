@@ -228,6 +228,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 1
               Version = '1.3.0.2'
+              OnClick = btn_FTDI_Read_TemperatureClick
             end
             object btn_FTDI_Read_Illumination: TAdvGlassButton
               Left = 183

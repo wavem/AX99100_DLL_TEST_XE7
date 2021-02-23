@@ -377,3 +377,10 @@ void __fastcall TFormMain::btn_FTDI_Device_CloseClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::btn_FTDI_Read_TemperatureClick(TObject *Sender)
+{
+	DWORD t_rst = GetTemp(&m_Temperature);
+	PrintMsg(ResultString_FTDI(t_rst));
+}
+//---------------------------------------------------------------------------
+

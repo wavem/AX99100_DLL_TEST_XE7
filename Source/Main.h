@@ -188,6 +188,7 @@ __published:	// IDE-managed Components
 	void __fastcall btn_WriteClick(TObject *Sender);
 	void __fastcall btn_FTDI_Device_OpenClick(TObject *Sender);
 	void __fastcall btn_FTDI_Device_CloseClick(TObject *Sender);
+	void __fastcall btn_FTDI_Read_TemperatureClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
