@@ -363,3 +363,10 @@ void __fastcall TFormMain::btn_WriteClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::btn_FTDI_Device_OpenClick(TObject *Sender)
+{
+	DWORD t_rst = FTDIPortOpen();
+	PrintMsg(ResultString_FTDI(t_rst));
+}
+//---------------------------------------------------------------------------
+

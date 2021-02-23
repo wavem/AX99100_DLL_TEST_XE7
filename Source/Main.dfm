@@ -109,6 +109,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 0
               Version = '1.3.0.2'
+              OnClick = btn_FTDI_Device_OpenClick
             end
             object btn_FTDI_Device_Close: TAdvGlassButton
               Left = 18
