@@ -194,7 +194,8 @@ public: // START
 
 	void __fastcall InitProgram();
 	void __fastcall PrintMsg(UnicodeString _str);
-	UnicodeString ResultString(int _rst);
+	UnicodeString ResultString_FTDI(int _rst);
+	UnicodeString ResultString_LBERR(int _rst);
 
 public: // DUDLL TEST
 

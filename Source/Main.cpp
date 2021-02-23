@@ -114,7 +114,14 @@ void __fastcall TFormMain::ClickMenuButton(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-UnicodeString TFormMain::ResultString(int _rst) {
+UnicodeString TFormMain::ResultString_LBERR(int _rst) {
+	UnicodeString tempStr = L"";
+
+	return tempStr;
+}
+//---------------------------------------------------------------------------
+
+UnicodeString TFormMain::ResultString_FTDI(int _rst) {
 	UnicodeString tempStr = L"";
 
 	switch(_rst) {
@@ -151,8 +158,8 @@ UnicodeString TFormMain::ResultString(int _rst) {
 
 void __fastcall TFormMain::btn_OpenClick(TObject *Sender)
 {
-	int t_rst = LBPortOpen();
-	PrintMsg(ResultString(t_rst));
+	//int t_rst = LBPortOpen();
+	//PrintMsg(ResultString(t_rst));
 }
 //---------------------------------------------------------------------------
 
