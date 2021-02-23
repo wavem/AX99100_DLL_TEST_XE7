@@ -54,7 +54,6 @@ object FormMain: TFormMain
       Width = 514
       Height = 385
       Align = alTop
-      PageIndex = 1
       TabOrder = 0
       ExplicitWidth = 700
       object TPage
@@ -75,7 +74,7 @@ object FormMain: TFormMain
           TabOrder = 0
           ExplicitWidth = 521
           ExplicitHeight = 329
-          object Group_1: TAdvGroupBox
+          object Group_FTDI_1: TAdvGroupBox
             Left = 24
             Top = 19
             Width = 137
@@ -89,7 +88,7 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
-            object btn_Clear_Right: TAdvGlassButton
+            object btn_FTDI_Device_Open: TAdvGlassButton
               Left = 18
               Top = 26
               Width = 100
@@ -111,7 +110,7 @@ object FormMain: TFormMain
               TabOrder = 0
               Version = '1.3.0.2'
             end
-            object AdvGlassButton1: TAdvGlassButton
+            object btn_FTDI_Device_Close: TAdvGlassButton
               Left = 18
               Top = 64
               Width = 100
@@ -134,7 +133,7 @@ object FormMain: TFormMain
               Version = '1.3.0.2'
             end
           end
-          object AdvGroupBox1: TAdvGroupBox
+          object Group_FTDI_2: TAdvGroupBox
             Left = 177
             Top = 19
             Width = 312
@@ -148,7 +147,7 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 1
-            object Label1: TLabel
+            object lb_FTDI_Title_1: TLabel
               Left = 25
               Top = 32
               Width = 86
@@ -163,7 +162,7 @@ object FormMain: TFormMain
               ParentColor = False
               ParentFont = False
             end
-            object Label3: TLabel
+            object lb_FTDI_Title_2: TLabel
               Left = 30
               Top = 73
               Width = 81
@@ -206,7 +205,7 @@ object FormMain: TFormMain
               Visible = True
               Version = '3.3.5.3'
             end
-            object AdvGlassButton4: TAdvGlassButton
+            object btn_FTDI_Read_Temperature: TAdvGlassButton
               Left = 183
               Top = 26
               Width = 100
@@ -228,7 +227,7 @@ object FormMain: TFormMain
               TabOrder = 1
               Version = '1.3.0.2'
             end
-            object AdvGlassButton5: TAdvGlassButton
+            object btn_FTDI_Read_Illumination: TAdvGlassButton
               Left = 183
               Top = 64
               Width = 100
@@ -279,7 +278,7 @@ object FormMain: TFormMain
               Version = '3.3.5.3'
             end
           end
-          object AdvGroupBox2: TAdvGroupBox
+          object Group_FTDI_4: TAdvGroupBox
             Left = 177
             Top = 152
             Width = 312
@@ -293,7 +292,7 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 2
-            object cxTrackBar1: TcxTrackBar
+            object TrackBar_FTDI: TcxTrackBar
               Left = 25
               Top = 22
               Cursor = crHandPoint
@@ -318,7 +317,7 @@ object FormMain: TFormMain
               Width = 248
             end
           end
-          object AdvGroupBox4: TAdvGroupBox
+          object Group_FTDI_3: TAdvGroupBox
             Left = 24
             Top = 152
             Width = 137
@@ -332,7 +331,7 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 3
-            object AdvGlassButton2: TAdvGlassButton
+            object btn_FTDI_SW_Test_0: TAdvGlassButton
               Left = 18
               Top = 26
               Width = 100
@@ -354,7 +353,7 @@ object FormMain: TFormMain
               TabOrder = 0
               Version = '1.3.0.2'
             end
-            object AdvGlassButton3: TAdvGlassButton
+            object btn_FTDI_SW_Test_1: TAdvGlassButton
               Left = 18
               Top = 64
               Width = 100
