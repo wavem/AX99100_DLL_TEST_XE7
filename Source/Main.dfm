@@ -54,6 +54,7 @@ object FormMain: TFormMain
       Width = 514
       Height = 385
       Align = alTop
+      PageIndex = 1
       TabOrder = 0
       ExplicitWidth = 700
       object TPage
@@ -397,7 +398,7 @@ object FormMain: TFormMain
           TabOrder = 0
           ExplicitWidth = 1018
           ExplicitHeight = 472
-          object AdvGroupBox3: TAdvGroupBox
+          object Group_MVB_1: TAdvGroupBox
             Left = 24
             Top = 19
             Width = 137
@@ -411,7 +412,7 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
-            object AdvGlassButton6: TAdvGlassButton
+            object btn_MVB_Device_Open: TAdvGlassButton
               Left = 18
               Top = 26
               Width = 100
@@ -433,7 +434,7 @@ object FormMain: TFormMain
               TabOrder = 0
               Version = '1.3.0.2'
             end
-            object AdvGlassButton7: TAdvGlassButton
+            object btn_MVB_Device_Close: TAdvGlassButton
               Left = 18
               Top = 64
               Width = 100
@@ -456,7 +457,7 @@ object FormMain: TFormMain
               Version = '1.3.0.2'
             end
           end
-          object AdvGroupBox5: TAdvGroupBox
+          object Group_MVB_2: TAdvGroupBox
             Left = 177
             Top = 19
             Width = 200
@@ -470,7 +471,7 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 1
-            object Label2: TLabel
+            object lb_MVB_Title_1: TLabel
               Left = 28
               Top = 31
               Width = 52
@@ -485,7 +486,7 @@ object FormMain: TFormMain
               ParentColor = False
               ParentFont = False
             end
-            object Label4: TLabel
+            object lb_MVB_Title_2: TLabel
               Left = 34
               Top = 63
               Width = 46
@@ -500,7 +501,7 @@ object FormMain: TFormMain
               ParentColor = False
               ParentFont = False
             end
-            object Label5: TLabel
+            object lb_MVB_Title_3: TLabel
               Left = 39
               Top = 95
               Width = 41
@@ -515,7 +516,7 @@ object FormMain: TFormMain
               ParentColor = False
               ParentFont = False
             end
-            object AdvGlassButton8: TAdvGlassButton
+            object btn_MVB_Read: TAdvGlassButton
               Left = 52
               Top = 138
               Width = 100
@@ -537,7 +538,7 @@ object FormMain: TFormMain
               TabOrder = 1
               Version = '1.3.0.2'
             end
-            object AdvGlassButton9: TAdvGlassButton
+            object btn_MVB_Write: TAdvGlassButton
               Left = 52
               Top = 176
               Width = 100
@@ -559,7 +560,7 @@ object FormMain: TFormMain
               TabOrder = 2
               Version = '1.3.0.2'
             end
-            object AdvEdit1: TAdvEdit
+            object ed_MVB_Length: TAdvEdit
               Left = 89
               Top = 30
               Width = 80
@@ -586,7 +587,7 @@ object FormMain: TFormMain
               Visible = True
               Version = '3.3.5.3'
             end
-            object AdvEdit2: TAdvEdit
+            object ed_MVB_Offset: TAdvEdit
               Left = 89
               Top = 62
               Width = 80
@@ -613,7 +614,7 @@ object FormMain: TFormMain
               Visible = True
               Version = '3.3.5.3'
             end
-            object AdvEdit5: TAdvEdit
+            object ed_MVB_Value: TAdvEdit
               Left = 89
               Top = 94
               Width = 80
