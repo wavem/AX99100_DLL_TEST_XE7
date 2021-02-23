@@ -119,6 +119,7 @@ UnicodeString TFormMain::ResultString_LBERR(int _rst) {
 	UnicodeString tempStr = L"";
 
 	switch(_rst) {
+
 		case LBERR_SUCCESS:
 			tempStr = L"LBERR_SUCCESS";
 			break;
@@ -157,36 +158,104 @@ UnicodeString TFormMain::ResultString_LBERR(int _rst) {
 //---------------------------------------------------------------------------
 
 UnicodeString TFormMain::ResultString_FTDI(int _rst) {
+
 	UnicodeString tempStr = L"";
 
 	switch(_rst) {
-		case LBERR_SUCCESS:
-			tempStr = L"LBERR_SUCCESS";
+
+		case FTDI_OK:
+			tempStr = L"FTDI_OK";
 			break;
 
-		case LBERR_NOTEXIST_PORT:
-			tempStr = L"LBERR_NOTEXIST_PORT";
+		case FTDI_INVALID_HANDLE:
+			tempStr = L"FTDI_INVALID_HANDLE";
 			break;
 
-		case LBERR_MANYEXIST_PORT:
-			tempStr = L"LBERR_MANYEXIST_PORT";
+		case FTDI_DEVICE_NOT_FOUND:
+			tempStr = L"FTDI_DEVICE_NOT_FOUND";
 			break;
 
-		case LBERR_PORT_OPEN_ERR:
-			tempStr = L"LBERR_PORT_OPEN_ERR";
+		case FTDI_DEVICE_NOT_OPENED:
+			tempStr = L"FTDI_DEVICE_NOT_OPENED";
 			break;
 
-		case LBERR_NOTOPEN_PORT:
-			tempStr = L"LBERR_NOTOPEN_PORT";
+		case FTDI_IO_ERROR:
+			tempStr = L"FTDI_IO_ERROR";
 			break;
 
-		case LBERR_BUSWIDTH_PORT:
-			tempStr = L"LBERR_BUSWIDTH_PORT";
+		case FTDI_INSUFFICIENT_RESOURCES:
+			tempStr = L"FTDI_INSUFFICIENT_RESOURCES";
+			break;
+
+		case FTDI_INVALID_PARAMETER:
+			tempStr = L"FTDI_INVALID_PARAMETER";
+			break;
+
+		case FTDI_INVALID_BAUD_RATE:
+			tempStr = L"FTDI_INVALID_BAUD_RATE";
+			break;
+
+		case FTDI_DEVICE_NOT_OPENED_FOR_ERASE:
+			tempStr = L"FTDI_DEVICE_NOT_OPENED_FOR_ERASE";
+			break;
+
+		case FTDI_DEVICE_NOT_OPENED_FOR_WRITE:
+			tempStr = L"FTDI_DEVICE_NOT_OPENED_FOR_WRITE";
+			break;
+
+		case FTDI_FAILED_TO_WRITE_DEVICE:
+			tempStr = L"FTDI_FAILED_TO_WRITE_DEVICE";
+			break;
+
+		case FTDI_EEPROM_READ_FAILED:
+			tempStr = L"FTDI_EEPROM_READ_FAILED";
+			break;
+
+		case FTDI_EEPROM_WRITE_FAILED:
+			tempStr = L"FTDI_EEPROM_WRITE_FAILED";
+			break;
+
+		case FTDI_EEPROM_ERASE_FAILED:
+			tempStr = L"FTDI_EEPROM_ERASE_FAILED";
+			break;
+
+		case FTDI_EEPROM_NOT_PRESENT:
+			tempStr = L"FTDI_EEPROM_NOT_PRESENT";
+			break;
+
+		case FTDI_EEPROM_NOT_PROGRAMMED:
+			tempStr = L"FTDI_EEPROM_NOT_PROGRAMMED";
+			break;
+
+		case FTDI_INVALID_ARGS:
+			tempStr = L"FTDI_INVALID_ARGS";
+			break;
+
+		case FTDI_NOT_SUPPORTED:
+			tempStr = L"FTDI_NOT_SUPPORTED";
+			break;
+
+		case FTDI_OTHER_ERROR:
+			tempStr = L"FTDI_OTHER_ERROR";
+			break;
+
+		case FTDI_DEVICE_LIST_NOT_READY:
+			tempStr = L"FTDI_DEVICE_LIST_NOT_READY";
+			break;
+
+		case FTDI_INPUT_BUF_CHECK_FAILED:
+			tempStr = L"FTDI_INPUT_BUF_CHECK_FAILED";
+			break;
+
+		case FTDI_DEVICE_BUSY_FAILED:
+			tempStr = L"FTDI_DEVICE_BUSY_FAILED";
 			break;
 
 		default:
+			tempStr = L"There is no error code";
 			break;
 	}
+
 	return tempStr;
 }
 //---------------------------------------------------------------------------
