@@ -27,7 +27,6 @@ object FormMain: TFormMain
     Contexts = <>
     TabOrder = 0
     TabStop = False
-    ExplicitWidth = 1018
     object Menutab_1: TdxRibbonTab
       Active = True
       Caption = 'Menu'
@@ -48,22 +47,18 @@ object FormMain: TFormMain
     Color = 3355443
     ParentBackground = False
     TabOrder = 5
-    ExplicitWidth = 1018
-    ExplicitHeight = 617
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
       Width = 514
       Height = 385
       Align = alTop
+      PageIndex = 2
       TabOrder = 0
-      ExplicitWidth = 700
       object TPage
         Left = 0
         Top = 0
         Caption = 'Bright'
-        ExplicitWidth = 1018
-        ExplicitHeight = 472
         object __pnBase_01_Bright: TPanel
           Left = 0
           Top = 0
@@ -74,8 +69,6 @@ object FormMain: TFormMain
           Color = 3355443
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 521
-          ExplicitHeight = 329
           object Group_FTDI_1: TAdvGroupBox
             Left = 24
             Top = 19
@@ -185,7 +178,7 @@ object FormMain: TFormMain
               Left = 120
               Top = 31
               Width = 50
-              Height = 20
+              Height = 19
               BorderColor = cl3DDkShadow
               EditAlign = eaRight
               EditType = etNumeric
@@ -259,7 +252,7 @@ object FormMain: TFormMain
               Left = 120
               Top = 71
               Width = 50
-              Height = 20
+              Height = 19
               BorderColor = cl3DDkShadow
               EditAlign = eaRight
               EditType = etNumeric
@@ -394,8 +387,6 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 1
         Caption = 'Memory'
-        ExplicitWidth = 1018
-        ExplicitHeight = 472
         object __pnBase_02_Memory: TPanel
           Left = 0
           Top = 0
@@ -406,8 +397,6 @@ object FormMain: TFormMain
           Color = 3355443
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 1018
-          ExplicitHeight = 472
           object Group_MVB_1: TAdvGroupBox
             Left = 24
             Top = 19
@@ -664,8 +653,6 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 2
         Caption = 'Libxl'
-        ExplicitWidth = 1018
-        ExplicitHeight = 472
         object __pnBase_03_Libxl: TPanel
           Left = 0
           Top = 0
@@ -676,11 +663,9 @@ object FormMain: TFormMain
           Color = 3355443
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 1018
-          ExplicitHeight = 472
           object lb_Length: TLabel
-            Left = 26
-            Top = 169
+            Left = 42
+            Top = 81
             Width = 45
             Height = 16
             Alignment = taRightJustify
@@ -693,8 +678,8 @@ object FormMain: TFormMain
             ParentFont = False
           end
           object lb_Offset: TLabel
-            Left = 31
-            Top = 202
+            Left = 47
+            Top = 114
             Width = 40
             Height = 16
             Alignment = taRightJustify
@@ -707,8 +692,8 @@ object FormMain: TFormMain
             ParentFont = False
           end
           object lb_Value: TLabel
-            Left = 35
-            Top = 235
+            Left = 51
+            Top = 147
             Width = 36
             Height = 16
             Alignment = taRightJustify
@@ -721,8 +706,8 @@ object FormMain: TFormMain
             ParentFont = False
           end
           object cb_SendPeriod: TAdvSmoothComboBox
-            Left = 370
-            Top = 6
+            Left = 130
+            Top = 25
             Width = 103
             Height = 30
             Cursor = crHandPoint
@@ -1096,8 +1081,8 @@ object FormMain: TFormMain
             TMSStyle = 4
           end
           object btn_Read: TAdvGlassButton
-            Left = 23
-            Top = 95
+            Left = 31
+            Top = 23
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -1118,69 +1103,10 @@ object FormMain: TFormMain
             ShineColor = clGray
             TabOrder = 1
             Version = '1.3.0.2'
-            OnClick = btn_ReadClick
-          end
-          object btn_Write: TAdvGlassButton
-            Left = 23
-            Top = 133
-            Width = 81
-            Height = 32
-            Cursor = crHandPoint
-            BackColor = clBlack
-            Caption = 'WRITE'
-            CornerRadius = 10
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clLime
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ForeColor = clRed
-            ForceTransparent = True
-            GlowColor = clLime
-            InnerBorderColor = clBlack
-            OuterBorderColor = clLime
-            ParentFont = False
-            ShineColor = clGray
-            TabOrder = 2
-            Version = '1.3.0.2'
-            OnClick = btn_WriteClick
-          end
-          object ed_Value: TAdvEdit
-            Left = 87
-            Top = 232
-            Width = 73
-            Height = 24
-            EditAlign = eaRight
-            EditType = etNumeric
-            EmptyTextStyle = []
-            MaxValue = 255
-            LabelFont.Charset = DEFAULT_CHARSET
-            LabelFont.Color = clWindowText
-            LabelFont.Height = -11
-            LabelFont.Name = 'Tahoma'
-            LabelFont.Style = []
-            Lookup.Font.Charset = DEFAULT_CHARSET
-            Lookup.Font.Color = clWindowText
-            Lookup.Font.Height = -11
-            Lookup.Font.Name = 'Arial'
-            Lookup.Font.Style = []
-            Lookup.Separator = ';'
-            Color = clWindow
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            MaxLength = 3
-            ParentFont = False
-            TabOrder = 3
-            Text = '0'
-            Visible = True
-            Version = '3.3.5.3'
           end
           object ed_Offset: TAdvEdit
-            Left = 87
-            Top = 199
+            Left = 103
+            Top = 111
             Width = 73
             Height = 24
             EditAlign = eaRight
@@ -1206,14 +1132,14 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             MaxLength = 1
             ParentFont = False
-            TabOrder = 4
+            TabOrder = 2
             Text = '0'
             Visible = True
             Version = '3.3.5.3'
           end
           object cb_Length: TAdvComboBox
-            Left = 87
-            Top = 166
+            Left = 103
+            Top = 78
             Width = 73
             Height = 24
             Color = clWindow
@@ -1240,8 +1166,41 @@ object FormMain: TFormMain
             LabelFont.Name = 'Tahoma'
             LabelFont.Style = []
             ParentFont = False
-            TabOrder = 5
+            TabOrder = 3
             Text = '32 bit'
+          end
+          object ed_Value: TAdvEdit
+            Left = 103
+            Top = 144
+            Width = 73
+            Height = 24
+            EditAlign = eaRight
+            EditType = etNumeric
+            EmptyTextStyle = []
+            MaxValue = 255
+            LabelFont.Charset = DEFAULT_CHARSET
+            LabelFont.Color = clWindowText
+            LabelFont.Height = -11
+            LabelFont.Name = 'Tahoma'
+            LabelFont.Style = []
+            Lookup.Font.Charset = DEFAULT_CHARSET
+            Lookup.Font.Color = clWindowText
+            Lookup.Font.Height = -11
+            Lookup.Font.Name = 'Arial'
+            Lookup.Font.Style = []
+            Lookup.Separator = ';'
+            Color = clWindow
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            MaxLength = 3
+            ParentFont = False
+            TabOrder = 4
+            Text = '0'
+            Visible = True
+            Version = '3.3.5.3'
           end
         end
       end

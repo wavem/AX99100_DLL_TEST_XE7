@@ -94,9 +94,6 @@ void __fastcall TFormMain::InitProgram() {
 	// Default Notebook Page Setting
 	Notebook_Main->PageIndex = 0;
 
-
-
-
 	PrintMsg(L"Init Complete");
 }
 //---------------------------------------------------------------------------
@@ -269,95 +266,6 @@ UnicodeString TFormMain::ResultString_FTDI(int _rst) {
 	}
 
 	return tempStr;
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFormMain::btn_ReadClick(TObject *Sender)
-{
-#if 0
-	UnicodeString tempStr = L"";
-	UnicodeString rstStr = L"Read : ";
-	unsigned long t_Offset = 0;
-	unsigned long t_Size = 0;
-	unsigned char* t_pBuffer = NULL;
-
-	t_Offset = StrToInt(ed_Offset->Text);
-
-	switch(cb_Length->ItemIndex) {
-		case 0:
-			t_Size = 4;
-			break;
-		case 1:
-			t_Size = 2;
-			break;
-		case 2:
-			t_Size = 1;
-			break;
-		default:
-			t_Size = 1;
-			break;
-	}
-
-
-	t_pBuffer = new unsigned char[t_Size];
-	int t_rst = LBPortRead(t_Offset, t_Size, 0, t_pBuffer);
-	PrintMsg(ResultString(t_rst));
-
-	for(int i = 0 ; i < t_Size ; i++) {
-		tempStr.sprintf(L"%02X ", t_pBuffer[i]);
-		rstStr += tempStr;
-	}
-
-	PrintMsg(rstStr);
-	if(t_pBuffer) delete t_pBuffer;
-#endif
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFormMain::btn_WriteClick(TObject *Sender)
-{
-#if 0
-	UnicodeString tempStr = L"";
-	UnicodeString rstStr = L"Write : ";
-	unsigned long t_Offset = 0;
-	unsigned long t_Size = 0;
-	unsigned char t_Value = 0;
-	unsigned char* t_pBuffer = NULL;
-
-	t_Offset = StrToInt(ed_Offset->Text);
-	t_Value = StrToInt(ed_Value->Text);
-
-	switch(cb_Length->ItemIndex) {
-		case 0:
-			t_Size = 4;
-			break;
-		case 1:
-			t_Size = 2;
-			break;
-		case 2:
-			t_Size = 1;
-			break;
-		default:
-			t_Size = 1;
-			break;
-	}
-
-	t_pBuffer = new unsigned char[t_Size];
-	memset(t_pBuffer, 0, t_Size);
-	memcpy((t_pBuffer + t_Offset), &t_Value, 1);
-
-
-	int t_rst = LBPortWrite(t_Offset, t_Size, 0, t_pBuffer);
-	PrintMsg(ResultString(t_rst));
-
-	for(int i = 0 ; i < t_Size ; i++) {
-		tempStr.sprintf(L"%02X ", t_pBuffer[i]);
-		rstStr += tempStr;
-	}
-
-	PrintMsg(rstStr);
-	if(t_pBuffer) delete t_pBuffer;
-#endif
 }
 //---------------------------------------------------------------------------
 

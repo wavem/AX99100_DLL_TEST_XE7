@@ -163,11 +163,9 @@ __published:	// IDE-managed Components
 	TAdvGlassButton *btn_MVB_Device_Open;
 	TAdvGlassButton *btn_MVB_Device_Close;
 	TAdvGlassButton *btn_Read;
-	TAdvGlassButton *btn_Write;
 	TLabel *lb_Length;
 	TLabel *lb_Offset;
 	TLabel *lb_Value;
-	TAdvEdit *ed_Value;
 	TAdvEdit *ed_Offset;
 	TAdvComboBox *cb_Length;
 	TAdvGroupBox *Group_MVB_2;
@@ -179,9 +177,8 @@ __published:	// IDE-managed Components
 	TLabel *lb_MVB_Title_3;
 	TAdvEdit *ed_MVB_Offset;
 	TAdvEdit *ed_MVB_Value;
+	TAdvEdit *ed_Value;
 	void __fastcall ClickMenuButton(TObject *Sender);
-	void __fastcall btn_ReadClick(TObject *Sender);
-	void __fastcall btn_WriteClick(TObject *Sender);
 	void __fastcall btn_FTDI_Device_OpenClick(TObject *Sender);
 	void __fastcall btn_FTDI_Device_CloseClick(TObject *Sender);
 	void __fastcall btn_FTDI_Read_TemperatureClick(TObject *Sender);
