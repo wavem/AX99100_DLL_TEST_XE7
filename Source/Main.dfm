@@ -53,6 +53,7 @@ object FormMain: TFormMain
       Width = 514
       Height = 385
       Align = alTop
+      PageIndex = 2
       TabOrder = 0
       object TPage
         Left = 0
@@ -676,34 +677,6 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object lb_Offset: TLabel
-            Left = 47
-            Top = 114
-            Width = 40
-            Height = 16
-            Alignment = taRightJustify
-            Caption = 'Offset'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clLime
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object lb_Value: TLabel
-            Left = 51
-            Top = 147
-            Width = 36
-            Height = 16
-            Alignment = taRightJustify
-            Caption = 'Value'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clLime
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
           object cb_SendPeriod: TAdvSmoothComboBox
             Left = 130
             Top = 25
@@ -1103,39 +1076,6 @@ object FormMain: TFormMain
             TabOrder = 1
             Version = '1.3.0.2'
           end
-          object ed_Offset: TAdvEdit
-            Left = 103
-            Top = 111
-            Width = 73
-            Height = 24
-            EditAlign = eaRight
-            EditType = etNumeric
-            EmptyTextStyle = []
-            MaxValue = 3
-            LabelFont.Charset = DEFAULT_CHARSET
-            LabelFont.Color = clWindowText
-            LabelFont.Height = -11
-            LabelFont.Name = 'Tahoma'
-            LabelFont.Style = []
-            Lookup.Font.Charset = DEFAULT_CHARSET
-            Lookup.Font.Color = clWindowText
-            Lookup.Font.Height = -11
-            Lookup.Font.Name = 'Arial'
-            Lookup.Font.Style = []
-            Lookup.Separator = ';'
-            Color = clWindow
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            MaxLength = 1
-            ParentFont = False
-            TabOrder = 2
-            Text = '0'
-            Visible = True
-            Version = '3.3.5.3'
-          end
           object cb_Length: TAdvComboBox
             Left = 103
             Top = 78
@@ -1165,41 +1105,8 @@ object FormMain: TFormMain
             LabelFont.Name = 'Tahoma'
             LabelFont.Style = []
             ParentFont = False
-            TabOrder = 3
+            TabOrder = 2
             Text = '32 bit'
-          end
-          object ed_Value: TAdvEdit
-            Left = 103
-            Top = 144
-            Width = 73
-            Height = 24
-            EditAlign = eaRight
-            EditType = etNumeric
-            EmptyTextStyle = []
-            MaxValue = 255
-            LabelFont.Charset = DEFAULT_CHARSET
-            LabelFont.Color = clWindowText
-            LabelFont.Height = -11
-            LabelFont.Name = 'Tahoma'
-            LabelFont.Style = []
-            Lookup.Font.Charset = DEFAULT_CHARSET
-            Lookup.Font.Color = clWindowText
-            Lookup.Font.Height = -11
-            Lookup.Font.Name = 'Arial'
-            Lookup.Font.Style = []
-            Lookup.Separator = ';'
-            Color = clWindow
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            MaxLength = 3
-            ParentFont = False
-            TabOrder = 4
-            Text = '0'
-            Visible = True
-            Version = '3.3.5.3'
           end
         end
       end
