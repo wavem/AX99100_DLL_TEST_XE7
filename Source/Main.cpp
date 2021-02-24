@@ -78,7 +78,6 @@
 #pragma link "cxTrackBar"
 #pragma link "AdvGroupBox"
 #pragma resource "*.dfm"
-//#pragma link "MVBDLL.lib"
 #pragma link "DU.lib"
 TFormMain *FormMain;
 //---------------------------------------------------------------------------
