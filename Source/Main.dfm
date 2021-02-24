@@ -14,6 +14,7 @@ object FormMain: TFormMain
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object RibbonMenu: TdxRibbon
@@ -156,7 +157,7 @@ object FormMain: TFormMain
               Width = 86
               Height = 14
               Caption = 'Temperature :'
-              Color = 2129339
+              Color = 3355443
               Font.Charset = DEFAULT_CHARSET
               Font.Color = 2262986
               Font.Height = -12
@@ -171,7 +172,7 @@ object FormMain: TFormMain
               Width = 81
               Height = 14
               Caption = 'Illumination :'
-              Color = 2129339
+              Color = 3355443
               Font.Charset = DEFAULT_CHARSET
               Font.Color = 2262986
               Font.Height = -12
@@ -442,6 +443,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 0
               Version = '1.3.0.2'
+              OnClick = btn_MVB_Device_OpenClick
             end
             object btn_MVB_Device_Close: TAdvGlassButton
               Left = 18
@@ -464,6 +466,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 1
               Version = '1.3.0.2'
+              OnClick = btn_MVB_Device_CloseClick
             end
           end
           object Group_MVB_2: TAdvGroupBox
@@ -486,7 +489,7 @@ object FormMain: TFormMain
               Width = 52
               Height = 14
               Caption = 'Length :'
-              Color = 2129339
+              Color = 3355443
               Font.Charset = DEFAULT_CHARSET
               Font.Color = 2262986
               Font.Height = -12
@@ -501,7 +504,7 @@ object FormMain: TFormMain
               Width = 46
               Height = 14
               Caption = 'Offset :'
-              Color = 2129339
+              Color = 3355443
               Font.Charset = DEFAULT_CHARSET
               Font.Color = 2262986
               Font.Height = -12
@@ -516,7 +519,7 @@ object FormMain: TFormMain
               Width = 41
               Height = 14
               Caption = 'Value :'
-              Color = 2129339
+              Color = 3355443
               Font.Charset = DEFAULT_CHARSET
               Font.Color = 2262986
               Font.Height = -12
@@ -546,6 +549,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 1
               Version = '1.3.0.2'
+              OnClick = btn_MVB_ReadClick
             end
             object btn_MVB_Write: TAdvGlassButton
               Left = 52
@@ -568,6 +572,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 2
               Version = '1.3.0.2'
+              OnClick = btn_MVB_WriteClick
             end
             object ed_MVB_Length: TAdvEdit
               Left = 89
@@ -577,7 +582,7 @@ object FormMain: TFormMain
               EditAlign = eaRight
               EditType = etNumeric
               EmptyTextStyle = []
-              MaxValue = 65535
+              MaxValue = 4
               LabelFont.Charset = DEFAULT_CHARSET
               LabelFont.Color = clWindowText
               LabelFont.Height = -11
@@ -590,10 +595,11 @@ object FormMain: TFormMain
               Lookup.Font.Style = []
               Lookup.Separator = ';'
               Color = clWindow
-              MaxLength = 5
+              MaxLength = 1
               TabOrder = 0
               Text = '0'
               Visible = True
+              OnChange = ed_MVB_LengthChange
               Version = '3.3.5.3'
             end
             object ed_MVB_Offset: TAdvEdit
@@ -1089,56 +1095,6 @@ object FormMain: TFormMain
             DropDownWidth = 112
             TMSStyle = 4
           end
-          object btn_Open: TAdvGlassButton
-            Left = 23
-            Top = 19
-            Width = 81
-            Height = 32
-            Cursor = crHandPoint
-            BackColor = clBlack
-            Caption = 'OPEN'
-            CornerRadius = 10
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clLime
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ForeColor = clRed
-            ForceTransparent = True
-            GlowColor = clLime
-            InnerBorderColor = clBlack
-            OuterBorderColor = clLime
-            ParentFont = False
-            ShineColor = clGray
-            TabOrder = 1
-            Version = '1.3.0.2'
-            OnClick = btn_OpenClick
-          end
-          object btn_Close: TAdvGlassButton
-            Left = 23
-            Top = 57
-            Width = 81
-            Height = 32
-            Cursor = crHandPoint
-            BackColor = clBlack
-            Caption = 'CLOSE'
-            CornerRadius = 10
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clLime
-            Font.Height = -13
-            Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
-            ForeColor = clRed
-            ForceTransparent = True
-            GlowColor = clLime
-            InnerBorderColor = clBlack
-            OuterBorderColor = clLime
-            ParentFont = False
-            ShineColor = clGray
-            TabOrder = 2
-            Version = '1.3.0.2'
-            OnClick = btn_CloseClick
-          end
           object btn_Read: TAdvGlassButton
             Left = 23
             Top = 95
@@ -1160,7 +1116,7 @@ object FormMain: TFormMain
             OuterBorderColor = clLime
             ParentFont = False
             ShineColor = clGray
-            TabOrder = 3
+            TabOrder = 1
             Version = '1.3.0.2'
             OnClick = btn_ReadClick
           end
@@ -1185,7 +1141,7 @@ object FormMain: TFormMain
             OuterBorderColor = clLime
             ParentFont = False
             ShineColor = clGray
-            TabOrder = 4
+            TabOrder = 2
             Version = '1.3.0.2'
             OnClick = btn_WriteClick
           end
@@ -1217,7 +1173,7 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             MaxLength = 3
             ParentFont = False
-            TabOrder = 5
+            TabOrder = 3
             Text = '0'
             Visible = True
             Version = '3.3.5.3'
@@ -1250,7 +1206,7 @@ object FormMain: TFormMain
             Font.Style = [fsBold]
             MaxLength = 1
             ParentFont = False
-            TabOrder = 6
+            TabOrder = 4
             Text = '0'
             Visible = True
             Version = '3.3.5.3'
@@ -1284,7 +1240,7 @@ object FormMain: TFormMain
             LabelFont.Name = 'Tahoma'
             LabelFont.Style = []
             ParentFont = False
-            TabOrder = 7
+            TabOrder = 5
             Text = '32 bit'
           end
         end

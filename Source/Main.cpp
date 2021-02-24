@@ -101,6 +101,18 @@ void __fastcall TFormMain::InitProgram() {
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::FormClose(TObject *Sender, TCloseAction &Action)
+{
+	ExitProgram();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::ExitProgram() {
+	LBPortClose();
+	FTDIPortClose();
+}
+//---------------------------------------------------------------------------
+
 void __fastcall TFormMain::PrintMsg(UnicodeString _str) {
 	int t_Line = memo->Lines->Add(_str);
 	memo->SetCursor(0, t_Line);
@@ -260,20 +272,6 @@ UnicodeString TFormMain::ResultString_FTDI(int _rst) {
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFormMain::btn_OpenClick(TObject *Sender)
-{
-	//int t_rst = LBPortOpen();
-	//PrintMsg(ResultString(t_rst));
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFormMain::btn_CloseClick(TObject *Sender)
-{
-	//int t_rst = LBPortClose();
-	//PrintMsg(ResultString(t_rst));
-}
-//---------------------------------------------------------------------------
-
 void __fastcall TFormMain::btn_ReadClick(TObject *Sender)
 {
 #if 0
@@ -382,6 +380,7 @@ void __fastcall TFormMain::btn_FTDI_Read_TemperatureClick(TObject *Sender)
 	DWORD t_rst = GetTemp(&m_Temperature);
 	if(t_rst != FTDI_OK) {
 		PrintMsg(ResultString_FTDI(t_rst));
+		ed_FTDI_Temperature->IntValue = 0;
 		return;
 	}
 
@@ -394,6 +393,7 @@ void __fastcall TFormMain::btn_FTDI_Read_IlluminationClick(TObject *Sender)
 	DWORD t_rst = GetLux(&m_Lux);
 	if(t_rst != FTDI_OK) {
 		PrintMsg(ResultString_FTDI(t_rst));
+		ed_FTDI_Illumination->IntValue = 0;
 		return;
 	}
 
@@ -427,6 +427,85 @@ void __fastcall TFormMain::TrackBar_FTDIPropertiesChange(TObject *Sender)
 		PrintMsg(ResultString_FTDI(t_rst));
 		return;
 	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_MVB_Device_OpenClick(TObject *Sender)
+{
+	DWORD t_rst = LBPortOpen();
+	PrintMsg(ResultString_LBERR(t_rst));
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_MVB_Device_CloseClick(TObject *Sender)
+{
+	DWORD t_rst = LBPortClose();
+	PrintMsg(ResultString_LBERR(t_rst));
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_MVB_ReadClick(TObject *Sender)
+{
+	UnicodeString tempStr = L"";
+	UnicodeString t_ResultStr = L"Read : ";
+	DWORD t_Size = ed_MVB_Length->IntValue;
+	DWORD t_Offset = ed_MVB_Offset->IntValue;
+	BYTE* t_Buffer = new BYTE[t_Size];
+
+	DWORD t_rst = LBPortRead(t_Offset, t_Size, 0, t_Buffer);
+	if(t_rst == LBERR_SUCCESS) {
+
+		for(int i = 0 ; i < t_Size ; i++) {
+			tempStr.sprintf(L"0x%02X ", t_Buffer[i]);
+			t_ResultStr += tempStr;
+		}
+		PrintMsg(t_ResultStr);
+	} else {
+		PrintMsg(ResultString_LBERR(t_rst));
+	}
+
+	delete t_Buffer;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_MVB_WriteClick(TObject *Sender)
+{
+	UnicodeString tempStr = L"";
+	AnsiString t_AnsiStr = L"";
+	UnicodeString t_ResultStr = L"Write : ";
+
+	DWORD t_Size = ed_MVB_Length->IntValue;
+	DWORD t_Offset = ed_MVB_Offset->IntValue;
+	BYTE* t_Buffer = new BYTE[t_Size];
+	int t_Int = 0;
+
+	tempStr = ed_MVB_Value->Text;
+	for(int i = 0 ; i < t_Size ; i++) {
+		t_AnsiStr = tempStr.SubString0(i * 2, 2);
+		t_Buffer[i] = strtol(t_AnsiStr.c_str(), NULL, 16);
+	}
+
+	DWORD t_rst = LBPortWrite(t_Offset, t_Size, 0, t_Buffer);
+	if(t_rst == LBERR_SUCCESS) {
+
+		for(int i = 0 ; i < t_Size ; i++) {
+			tempStr.sprintf(L"0x%02X ", t_Buffer[i]);
+			t_ResultStr += tempStr;
+		}
+		PrintMsg(t_ResultStr);
+	} else {
+		PrintMsg(ResultString_LBERR(t_rst));
+	}
+
+	delete t_Buffer;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::ed_MVB_LengthChange(TObject *Sender)
+{
+	TAdvEdit* p_Edit = (TAdvEdit*)Sender;
+	ed_MVB_Value->IntValue = 0;
+	ed_MVB_Value->MaxLength = p_Edit->IntValue * 2;
 }
 //---------------------------------------------------------------------------
 

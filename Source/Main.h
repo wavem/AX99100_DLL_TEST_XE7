@@ -162,8 +162,6 @@ __published:	// IDE-managed Components
 	TAdvGroupBox *Group_MVB_1;
 	TAdvGlassButton *btn_MVB_Device_Open;
 	TAdvGlassButton *btn_MVB_Device_Close;
-	TAdvGlassButton *btn_Open;
-	TAdvGlassButton *btn_Close;
 	TAdvGlassButton *btn_Read;
 	TAdvGlassButton *btn_Write;
 	TLabel *lb_Length;
@@ -182,8 +180,6 @@ __published:	// IDE-managed Components
 	TAdvEdit *ed_MVB_Offset;
 	TAdvEdit *ed_MVB_Value;
 	void __fastcall ClickMenuButton(TObject *Sender);
-	void __fastcall btn_OpenClick(TObject *Sender);
-	void __fastcall btn_CloseClick(TObject *Sender);
 	void __fastcall btn_ReadClick(TObject *Sender);
 	void __fastcall btn_WriteClick(TObject *Sender);
 	void __fastcall btn_FTDI_Device_OpenClick(TObject *Sender);
@@ -192,6 +188,12 @@ __published:	// IDE-managed Components
 	void __fastcall btn_FTDI_Read_IlluminationClick(TObject *Sender);
 	void __fastcall ClickSwitchTestButton(TObject *Sender);
 	void __fastcall TrackBar_FTDIPropertiesChange(TObject *Sender);
+	void __fastcall btn_MVB_Device_OpenClick(TObject *Sender);
+	void __fastcall btn_MVB_Device_CloseClick(TObject *Sender);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+	void __fastcall btn_MVB_ReadClick(TObject *Sender);
+	void __fastcall btn_MVB_WriteClick(TObject *Sender);
+	void __fastcall ed_MVB_LengthChange(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
@@ -199,6 +201,7 @@ public:		// User declarations
 public: // START
 
 	void __fastcall InitProgram();
+	void __fastcall ExitProgram();
 	void __fastcall PrintMsg(UnicodeString _str);
 	UnicodeString ResultString_FTDI(int _rst);
 	UnicodeString ResultString_LBERR(int _rst);
