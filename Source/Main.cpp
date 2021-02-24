@@ -95,6 +95,16 @@ void __fastcall TFormMain::InitProgram() {
 	Notebook_Main->PageIndex = 0;
 
 	PrintMsg(L"Init Complete");
+
+
+	PrintMsg(B(1));
+	PrintMsg(D(1));
+	PrintMsg(C(2));
+	PrintMsg(E(3));
+
+	PrintMsg(F(1));
+
+
 }
 //---------------------------------------------------------------------------
 
