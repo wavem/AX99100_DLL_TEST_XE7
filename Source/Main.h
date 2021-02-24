@@ -189,6 +189,9 @@ __published:	// IDE-managed Components
 	void __fastcall btn_FTDI_Device_OpenClick(TObject *Sender);
 	void __fastcall btn_FTDI_Device_CloseClick(TObject *Sender);
 	void __fastcall btn_FTDI_Read_TemperatureClick(TObject *Sender);
+	void __fastcall btn_FTDI_Read_IlluminationClick(TObject *Sender);
+	void __fastcall ClickSwitchTestButton(TObject *Sender);
+	void __fastcall TrackBar_FTDIPropertiesChange(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
@@ -203,7 +206,6 @@ public: // START
 public: // Member Variables
 	int m_Temperature;
 	int m_Lux;
-	int m_Hrs;
 	int m_Bl;
 
 

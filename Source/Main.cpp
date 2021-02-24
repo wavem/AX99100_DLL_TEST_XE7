@@ -380,7 +380,53 @@ void __fastcall TFormMain::btn_FTDI_Device_CloseClick(TObject *Sender)
 void __fastcall TFormMain::btn_FTDI_Read_TemperatureClick(TObject *Sender)
 {
 	DWORD t_rst = GetTemp(&m_Temperature);
-	PrintMsg(ResultString_FTDI(t_rst));
+	if(t_rst != FTDI_OK) {
+		PrintMsg(ResultString_FTDI(t_rst));
+		return;
+	}
+
+	ed_FTDI_Temperature->IntValue = m_Temperature;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_FTDI_Read_IlluminationClick(TObject *Sender)
+{
+	DWORD t_rst = GetLux(&m_Lux);
+	if(t_rst != FTDI_OK) {
+		PrintMsg(ResultString_FTDI(t_rst));
+		return;
+	}
+
+	ed_FTDI_Illumination->IntValue = m_Lux;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::ClickSwitchTestButton(TObject *Sender)
+{
+	TAdvGlassButton *p_Btn = (TAdvGlassButton*)Sender;
+	int t_Channel = p_Btn->Tag;
+	BYTE t_Data = 0;
+
+	DWORD t_rst = GetHrs(t_Channel, &t_Data);
+	if(t_rst != FTDI_OK) {
+		PrintMsg(ResultString_FTDI(t_rst));
+		return;
+	}
+
+	UnicodeString tempStr = L"";
+	tempStr.sprintf(L"Switch[%d] : 0x%02X", t_Channel, t_Data);
+	PrintMsg(tempStr);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::TrackBar_FTDIPropertiesChange(TObject *Sender)
+{
+	m_Bl = TrackBar_FTDI->Position;
+	DWORD t_rst = SetBl(m_Bl);
+	if(t_rst != FTDI_OK) {
+		PrintMsg(ResultString_FTDI(t_rst));
+		return;
+	}
 }
 //---------------------------------------------------------------------------
 

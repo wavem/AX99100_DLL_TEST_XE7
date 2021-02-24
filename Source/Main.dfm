@@ -252,6 +252,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 2
               Version = '1.3.0.2'
+              OnClick = btn_FTDI_Read_IlluminationClick
             end
             object ed_FTDI_Illumination: TAdvEdit
               Left = 120
@@ -300,7 +301,9 @@ object FormMain: TFormMain
               Left = 25
               Top = 22
               Cursor = crHandPoint
+              Properties.Max = 245
               Properties.ShowPositionHint = True
+              Properties.OnChange = TrackBar_FTDIPropertiesChange
               Style.HotTrack = False
               Style.LookAndFeel.Kind = lfUltraFlat
               Style.LookAndFeel.NativeStyle = False
@@ -356,8 +359,10 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 0
               Version = '1.3.0.2'
+              OnClick = ClickSwitchTestButton
             end
             object btn_FTDI_SW_Test_1: TAdvGlassButton
+              Tag = 1
               Left = 18
               Top = 64
               Width = 100
@@ -378,6 +383,7 @@ object FormMain: TFormMain
               ShineColor = clGray
               TabOrder = 1
               Version = '1.3.0.2'
+              OnClick = ClickSwitchTestButton
             end
           end
         end
