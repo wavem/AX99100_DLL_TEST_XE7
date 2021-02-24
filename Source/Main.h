@@ -81,14 +81,6 @@
 #include "AdvGroupBox.hpp"
 //---------------------------------------------------------------------------
 
-#define A1 L"A1"
-#define B(x) A##x
-#define C(x)	(x)
-#define D(x)	#x
-#define E(x)	C(x)
-#define F(x)	B(x)
-
-
 #define	LBERR_SUCCESS						(0x00)
 #define	LBERR_NOTEXIST_PORT					(0x01)
 #define LBERR_MANYEXIST_PORT				(0x02)
